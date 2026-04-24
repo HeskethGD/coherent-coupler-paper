@@ -300,9 +300,9 @@ These special points are defined implicitly through their Weierstrass function v
 \wp{\left(z_{1}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2}, \notag \\
 \wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) \sqrt{{d}_{4}}}{4}, \notag \\
 \wp{\left({\mu}_{j} - z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} - \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)}, \notag \\
-\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}. \label{eq:wp-points}
+\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}, \label{eq:wp-points}
 \end{align}
-
+where it is to be noted that in Appendix \ref{app:param-def-appendix} we state $d_4=b_2^2$ and here we take $\sqrt{d_4}=b_2$ and define $z_1$ accordingly.
 The solutions for modal powers are then found from \eqref{eq:uvj-gam-rho} and \eqref{eq:rho-wp-1} to be:
 \begin{align}
 u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
@@ -321,6 +321,8 @@ Direct substitution of \eqref{eq:ham-uv}, \eqref{eq:duv_j}, \eqref{eq:uvj-gam-rh
 \begin{align}
 \frac{\frac{\partial}{\partial z} u_j{\left(z\right)}}{u_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} - \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} + \rho{\left(z \right)} {\Lambda}_{1,j} + {\Lambda}_{0,j}, \notag \\
 \frac{\frac{\partial}{\partial z} v_j{\left(z\right)}}{v_j{\left(z\right)}} &= \frac{1}{2}\frac{\rho'{\left(z \right)} + \rho'{\left({\mu}_{j} \right)}}{\rho{\left(z \right)} - \rho{\left({\mu}_{j} \right)}} - \rho{\left(z \right)} {\Lambda}_{1,j} - {\Lambda}_{0,j}, \label{eq:dlog-u-v-rho} \\
+{\Lambda}_{0,j} &= - {a}_{j} - \frac{{\gamma}_{j}}{4}\sum_{\substack{1 \leq k \leq 2\\1 \leq l \leq 2}} {a}_{k,l} - \sum_{l=1}^{2} {a}_{j,l} {\gamma}_{l} + \frac{1}{2}\sum_{k=1}^{2} {a}_{k,k} {\gamma}_{k} + \sum_{k=1}^{2} \frac{{a}_{k}}{2}, \\
+{\Lambda}_{1,j} &= \sum_{k=1}^{2} {a}_{j,k} - \frac{1}{4}\sum_{\substack{1 \leq k \leq 2\\1 \leq l \leq 2}}{a}_{k,l}, \\
 {\Lambda}_{0,j} &= - {a}_{j} - \frac{{\gamma}_{j}}{4} \sum\limits_{k,l=1}^{4} {a}_{k,l} - \sum_{k=1}^{4} {a}_{j,k} {\gamma}_{k} + \frac{1}{2}\sum_{k=1}^{4} {\gamma}_{k} \sum_{l=1}^{4} {a}_{k,l} + \frac{1}{2}\sum_{k=1}^{4} {a}_{k}, \\
 {\Lambda}_{1,j} &= \sum_{k=1}^{4} {a}_{j,k} - \frac{1}{4}\sum\limits_{k,l=1}^{4}  {a}_{k,l},
 \end{align}
@@ -354,11 +356,15 @@ where the branch of the logarithm is chosen continuously along the integration p
 \begin{align}
 W_j &= \frac{\wp'{\left(z_{1} \right)}}{\sqrt{{d}_{4}}\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
 r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
-r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}}.
+r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}},
 \end{align}
-These solutions are valid for all initial conditions and include full pump depletion, cross-phase modulation, and phase mismatch effects without approximation.
+and it can be shown that:
+\begin{equation}
+  \sum_{j=1}^{2}r_{1,j} = 1. \label{eq:r1j-sum}
+\end{equation}
+These solutions are valid for all initial conditions without approximation.
 
-As a remarkable connection, we show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
+We show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
 This provides a deeper structural understanding of how the Hamiltonian is conserved and connects the four-wave mixing system to the broader theory of elliptic functions.
 
 % ---------- SECTION -------------
@@ -408,29 +414,32 @@ To begin, let us consider a transform of the system in \eqref{eq:uv-system} of t
 \begin{align}
 u_j(z) &= \hat{u}_j(z) e^{- \phi_j(z)}, \notag \\
 v_j(z) &= \hat{v}_j(z) e^{\phi_j(z)}, \\ 
-\sum_{j=1}^{4} \phi_j(z) &= 0,
+\sum_{j=1}^{2} \phi_j(z) &= 0,
 \end{align}
 where transforming the conjugate mode with the opposing phase leaves modal powers unchanged, and where the sum over $\phi_j$ being zero ensures we do not encounter any new terms appearing in the exponents of wave mixing terms.
 We make the following choice for $\phi_j$ composed of a part linear in $z$ (labelled $L$) and a part nonlinear in $z$ (labelled $NL$) (where $L$ and $NL$ are function labels not exponents):
 \begin{align}
+N &= 2, \\
 \phi_j(z) &= \phi_j^{L}(z) + \phi_j^{NL}(z) \\
-\phi_j^{L}(z) &= z\left({a}_{j} - \frac{1}{4}\sum_{m=1}^{4} a_{m} - \frac{{\gamma}_{j}}{4} \sum\limits_{l,k=1}^{4} a_{l,k}\right) \\
-\phi_j^{NL}(z)  &= \sum_{k=1}^{4} \left({a}_{j,k} - \frac{1}{4}\sum_{l=1}^{4} {a}_{l,k}\right) \int \hat{u}_k (z) \hat{v}_k (z) \, dz \\
-\sum_{j=1}^{4} \phi_j(z) &= \sum_{j=1}^{4} \phi_j^{L}(z) = \sum_{j=1}^{4} \phi_j^{NL}(z) =0.
+\phi_j^{L}(z) &= z\left({a}_{j} - \frac{1}{N}\sum_{k=1}^{N} a_{k} - \frac{{\gamma}_{j}}{N} \sum\limits_{l,k=1}^{N} a_{l,k}\right), \\
+\phi_j^{NL}(z)  &= \sum_{k=1}^{N} \left({a}_{j,k} - \frac{1}{N}\sum_{l=1}^{N} {a}_{l,k}\right) \int \hat{u}_k (z) \hat{v}_k (z) \, dz \\
+\sum_{j=1}^{N} \phi_j(z) &= \sum_{j=1}^{N} \phi_j^{L}(z) = \sum_{j=1}^{N} \phi_j^{NL}(z) =0.
 \end{align}
 
 This transforms \eqref{eq:uv-system} into the following system:
 \begin{align}
 \frac{\partial}{\partial z} \hat{u}_j &= \left(\frac{b_1}{4} - \frac{b_2}{2}\hat{u}_j \hat{v}_j \right) \hat{u}_j + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
-\frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \label{eq:uv-hat-system}
+\frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \\
+\frac{\partial}{\partial z} \hat{u}_j &= \left(b_1 - 2 b_2\hat{u}_j \hat{v}_j \right) \frac{\hat{u}_j}{N} + \prod\limits_{k=1, k \ne j}^{N} \hat{v}_k \notag \\
+\frac{\partial}{\partial z} \hat{v}_j &= \left( - b_1 + 2 b_2\hat{u}_j \hat{v}_j\right) \frac{\hat{v}_j}{N} - \prod\limits_{k=1, k \ne j}^{N} \hat{u}_k \label{eq:uv-hat-system}
 \end{align}
 for which the conserved canonical Hamiltonian is:
 \begin{align}
-\hat{H} &= \prod_{l=1}^{4} \hat{u}_l + \prod_{l=1}^{4} \hat{v}_l - \frac{1}{4}\sum_{l=1}^{4} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
+\hat{H} &= \prod_{l=1}^{N} \hat{u}_l + \prod_{l=1}^{N} \hat{v}_l - \frac{1}{N}\sum_{l=1}^{N} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
 \end{align}
 and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
 Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}, we observe significant simplification.
-All modes now share a single propagation constant $b_1/4$ and a single self-phase modulation coefficient $b_2/2$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
+All modes now share a single propagation constant $b_1/N$ and a single self-phase modulation coefficient $2b_2/N$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 % This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
@@ -629,17 +638,18 @@ This appendix provides explicit formulae for the parameters $b_l$, $c_l$, and $d
 These parameters are expressed in terms of the system parameters $a_j$, $a_{j,k}$ and the conserved constants $\gamma_j$.
 
 \begin{align}
-{b}_{0} &= {a}_{0} + \sum_{j=1}^{4} {a}_{j} {\gamma}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k} {\gamma}_{j} {\gamma}_{k}, \notag \\
-{b}_{1} &= - \sum_{j=1}^{4} {a}_{j} - \frac{1}{2}\sum\limits_{j,k=1}^{4} \left({\gamma}_{j} + {\gamma}_{k}\right) {a}_{j,k}, \notag \\
+N &= 2,\\
+{b}_{0} &= {a}_{0} + \sum_{j=1}^{N} {a}_{j} {\gamma}_{j} + \frac{1}{2}\sum\limits_{j,k=1}^{N} {a}_{j,k} {\gamma}_{j} {\gamma}_{k}, \notag \\
+{b}_{1} &= - \sum_{j=1}^{N} {a}_{j} - \frac{1}{2}\sum\limits_{j,k=1}^{N} \left({\gamma}_{j} + {\gamma}_{k}\right) {a}_{j,k}, \notag \\
 {b}_{2} &= \frac{1}{2}\sum\limits_{j,k=1}^{4} {a}_{j,k}, \notag \\
-{c}_{0} &= \prod_{j=1}^{4} {\gamma}_{j}, \notag \\
-{c}_{1} &= - \sum_{k=1}^{4} \prod_{\substack{j=1 \\ j \ne k}}^{4} {\gamma}_{j}, \notag \\
-{c}_{2} &= \frac{3}{2} \sum_{j=1}^{4} {\gamma}_{j}^{2} - \frac{1}{4}\sum\limits_{j,k=1}^{4} \left({\gamma}_{j} - {\gamma}_{k}\right)^{2} = - \frac{1}{2}\sum_{j=1}^{4} {\gamma}_{j}^{2}, \notag \\
+{c}_{0} &= \prod_{j=1}^{N} {\gamma}_{j}, \notag \\
+{c}_{1} &= 0, \notag \\
+{c}_{2} &= 1, \notag \\
 {d}_{0} &= {b}_{0}^{2} - 4 {c}_{0}, \notag \\
-{d}_{1} &= 2 {b}_{0} {b}_{1} - 4 {c}_{1}, \notag \\
-{d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4 {c}_{2}, \notag \\
+{d}_{1} &= 2 {b}_{0} {b}_{1}, \notag \\
+{d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4, \notag \\
 {d}_{3} &= 2 {b}_{1} {b}_{2}, \notag \\
-{d}_{4} &= {b}_{2}^{2} - 4 
+{d}_{4} &= {b}_{2}^{2}
 \end{align}
 
 % ---------- APPENDIX ------------
@@ -652,8 +662,9 @@ This appendix gives the relationships between initial conditions for the physica
 These relations enable determination of the constants from specified initial values of $u_j(0)$ and $v_j(0)$.
 
 \begin{align}
-\rho{\left(0 \right)} &= - \frac{1}{4}\sum_{j=1}^{4} u_j{\left(0 \right)} v_j{\left(0 \right)}, \notag \\
-\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{4} u_j(0) - \prod_{j=1}^{4} v_j(0), \notag \\
+N &= 2, \notag \\
+\rho{\left(0 \right)} &= - \frac{1}{N}\sum_{j=1}^{N} u_j{\left(0 \right)} v_j{\left(0 \right)}, \notag \\
+\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }} &= \prod_{j=1}^{N} u_j(0) - \prod_{j=1}^{N} v_j(0), \notag \\
 {\gamma}_{j} &= u_j{\left(0\right)} v_j{\left(0 \right)} + \rho{\left(0 \right)}
 \end{align}
 
@@ -665,7 +676,7 @@ These relations enable determination of the constants from specified initial val
 \label{app:fs-det-ham-proof}
 
 The Frobenius-Stickelberger (FS) determinant formula is an elliptic function identity relating products of $\sigma$ functions to determinants of derivatives of $\wp$ \cite{whittakerCourseModernAnalysis2021, frobeniusZurTheorieElliptischen1877}.
-In this appendix we demonstrate that the conservation of the Hamiltonian can be viewed as a manifestation of this classical identity, providing a deeper structural understanding of why the Hamiltonian is conserved in four-wave mixing.
+In this appendix we demonstrate that the conservation of the Hamiltonian can be viewed as a manifestation of this classical identity, providing a deeper structural understanding of why the Hamiltonian is conserved in the coherent coupler.
 
 Our starting point is equation \eqref{eq:fs-det-start}, which relates the wave mixing product to the phase modulation terms via the Hamiltonian.
 We will show that this equation can be transformed into the FS determinant formula by treating the left-hand side (the product of modes) and right-hand side (the polynomial in $\rho$) separately, each ultimately expressed in terms of Weierstrass functions.
@@ -693,7 +704,7 @@ C = &\frac{12  \sigma{\left({\nu}_{1} - {\nu}_{2}\right)} \sigma{\left({\nu}_{1}
 
 The starting point for us is the following relation established via \eqref{eq:ham-uv}, \eqref{eq:duv_j}, and \eqref{eq:Q-uv}, in which any $j$ applies in the RHS modal power derivative:
 \begin{align}
-2 \prod_{k=1}^{4} u_k &= {a}_{0} + \sum_{k=1}^{4} {a}_{k} u_k v_k  + \frac{1}{2}\sum\limits_{k,l=1}^{4} {a}_{k,l} u_k v_k u_l v_l - \frac{\partial}{\partial z} u_j\, v_j, \notag \\
+2 \prod_{k=1}^{2} u_k &= {a}_{0} + \sum_{k=1}^{2} {a}_{k} u_k v_k  + \frac{1}{2}\sum\limits_{k,l=1}^{2} {a}_{k,l} u_k v_k u_l v_l - \frac{\partial}{\partial z} u_j\, v_j, \notag \\
 &=\rho' + \sum_{l=0}^{2}b_l\,\rho\left(z\right)^l. \label{eq:fs-det-start}
 \end{align}
 We will show how \eqref{eq:fs-det-start} can be transformed into \eqref{eq:fs-det-m}
@@ -702,45 +713,45 @@ We will show how \eqref{eq:fs-det-start} can be transformed into \eqref{eq:fs-de
 From \eqref{eq:uv-wp}, the right hand side of \eqref{eq:fs-det-start} is a doubly periodic elliptic function,
 so too then is the left hand side. Thus for integers $m,n$ and half-periods $\omega_1, \omega_3$ we must have:
 \begin{align}
-\prod_{j=1}^{4} \frac{u_j{\left(z\right)}}{u_j{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)}} & = 1. \label{eq:u-prod-is-one}
+\prod_{j=1}^{2} \frac{u_j{\left(z\right)}}{u_j{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)}} & = 1. \label{eq:u-prod-is-one}
 \end{align}
-We substitute our solution \eqref{eq:u-v-quartic} into \eqref{eq:u-prod-is-one} and use the quasi-periodicity of $\sigma$:
+We substitute our solution \eqref{eq:u-v-quartic} into \eqref{eq:u-prod-is-one}, take advantage of \eqref{eq:r1j-sum} to simplify, and use the quasi-periodicity of $\sigma$:
 \begin{align}
 \sigma{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + z\right)} = \left(-1\right)^{m n + m + n} \sigma{\left(z\right)} e^{\left(2 m {\omega}_{3} + 2 n {\omega}_{1} + 2 z\right) \zeta{\left(m {\omega}_{3} + n {\omega}_{1}\right)}} \label{eq:quasi-sigma}
 \end{align}
 to reduce the product in \eqref{eq:u-prod-is-one} to an exponential which, as it is equal to one, must have argument $2\pi i \mathrm{N}(n,m)$, with $\mathrm{N}(n,m)$ an integer that varies with $n,m$.
 This leads to:
 \begin{align}
-2 i \pi \mathrm{N}{\left(n,m \right)} &= - \left(2 m {\omega}_{3} + 2 n {\omega}_{1}\right) \sum_{j=1}^{4} {r}_{0,j} - 2 \zeta{\left(m {\omega}_{3} + n {\omega}_{1}\right)} \sum_{j=1}^{4} {\nu}_{j}, \label{eq:exp-arg-is-one} \\ 
-\sum_{j=1}^{4} {\nu}_{j} &= 2 \mathrm{N}{\left(1,0 \right)} {\omega}_{3} - 2 \mathrm{N}{\left(0,1 \right)} {\omega}_{1} = 0 \pmod{\text{lattice}}, \label{eq:nuj-sum-zero}  \\ 
-\sum_{j=1}^{4} {r}_{0,j} &= 2 \,\zeta{\left(\mathrm{N}{\left(0,1 \right)} {\omega}_{1} - \mathrm{N}{\left(1,0 \right)} {\omega}_{3}\right)} \label{eq:roj-is-zeta} 
+2 i \pi \mathrm{N}{\left(n,m \right)} &= - 2 \left(2 z_{1} + \sum_{j=1}^{2} {\nu}_{j}\right) \zeta{\left(m {\omega}_{3} + n {\omega}_{1},g_{2},g_{3} \right)} - \left(2 m {\omega}_{3} + 2 n {\omega}_{1}\right) \sum_{j=1}^{2} {r}_{0,j}, \label{eq:exp-arg-is-one} \\ 
+2 z_{1} + \sum_{j=1}^{2} {\nu}_{j} &= - 2 \mathrm{N}{\left(0,1 \right)} {\omega}_{1} + 2 \mathrm{N}{\left(1,0 \right)} {\omega}_{3} = 0 \pmod{\text{lattice}}, \label{eq:nuj-sum-zero}  \\
+\sum_{j=1}^{2} {r}_{0,j} &= - 2 \zeta{\left(m {\omega}_{3} + n {\omega}_{1},g_{2},g_{3} \right)} \label{eq:roj-is-zeta} 
 \end{align}
 where $\nu_j=\mu_j-z_0$, and in moving from \eqref{eq:exp-arg-is-one} to \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} we made use of the identity $\zeta{\left({\omega}_{3}\right)} {\omega}_{1} - \zeta{\left({\omega}_{1}\right)} {\omega}_{3} = i \pi /2$. 
-Ultimately, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution in the left hand side of \eqref{eq:fs-det-start}:
+Ultimately, equations \eqref{eq:quasi-sigma}, \eqref{eq:nuj-sum-zero} and \eqref{eq:roj-is-zeta} allow us to make the following substitution (or the equivalent at $z\rightarrow z - z_0$) in the left hand side of \eqref{eq:fs-det-start}:
 \begin{align}
-\frac{\sigma{\left(z + {\nu}_{4} \right)}}{\sigma{\left({\nu}_{4} \right)}}\,\exp{\left(z \sum\limits_{j=1}^{4} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - {\nu}_{1} - {\nu}_{2} - {\nu}_{3} \right)}}{\sigma{\left({\nu}_{1} + {\nu}_{2} + {\nu}_{3} \right)}}.
+\frac{\sigma{\left(z + z_1 \right)}}{\sigma{\left(z_1 \right)}}\,\exp{\left(z \sum\limits_{j=1}^{2} {r}_{0,j}\right)} = - \frac{\sigma{\left(z - z_1 - {\nu}_{1} - {\nu}_{2}\right)}}{\sigma{\left(z_1 + {\nu}_{1} + {\nu}_{2}\right)}}.
 \end{align}
 
 \subsection{The right hand side}
-The following algebraic identity follows from Waring-Lagrange interpolation and holds for any values of the variables and functions:
+The following polynomial interpolation formula holds for any values of the variables and functions:
 \begin{align}
-\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l =\, &\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{2} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{3}\right) \left({\gamma}_{2} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_1^l + \notag \\
-&\frac{\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{3} - {\gamma}_{2}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
-&\frac{\left({\gamma}_{2} - \rho{\left(z \right)}\right) \left({\gamma}_{3} - \rho{\left(z \right)}\right)}{\left({\gamma}_{1} - {\gamma}_{2}\right) \left({\gamma}_{1} - {\gamma}_{3}\right)} \sum\limits_{l=0}^{2}b_l\,\gamma_3^l \label{eq:waring-lagrange}
+\sum_{l=0}^{2}b_l\,\rho\left(z\right)^l =\, &\frac{{\gamma}_{1} - \rho{\left(z \right)} }{{\gamma}_{1} - {\gamma}_{2}} \sum\limits_{l=0}^{2}b_l\,\gamma_1^l + \notag \\
+&\frac{{\gamma}_{2} - \rho{\left(z \right)} }{{\gamma}_{2} - {\gamma}_{1}} \sum\limits_{l=0}^{2}b_l\,\gamma_2^l + \notag \\
+&\left({\gamma}_{1} - \rho{\left(z \right)}\right) \left({\gamma}_{2} - \rho{\left(z \right)}\right) b_2 \label{eq:poly-interp}
 \end{align}
 where in our case $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be written using \eqref{eq:drho-sqrd-2} as:
 \begin{align}
 \sum\limits_{l=0}^{2}b_l\,\gamma_j^l = \rho'\left(\mu_j\right).
 \end{align}
-We can then use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ so that we can substitute all variables in \eqref{eq:waring-lagrange} for values in terms of $\wp, \wp'$. 
+We can then use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ so that we can substitute all variables in \eqref{eq:poly-interp} for values in terms of $\wp, \wp'$. 
 We then divide both sides of \eqref{eq:fs-det-start} by:
 \begin{align}
 \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
 \end{align}
-and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by multiplying by $\sigma(z)^4$ and taking $z\rightarrow 0$.
+and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by evaluating at $z\rightarrow z + z_0$, multiplying by $\sigma(z)^4$, and taking $z\rightarrow 0$.
 
 This completes the demonstration that the Hamiltonian conservation law \eqref{eq:fs-det-start} is equivalent to the Frobenius-Stickelberger determinant formula.
-This connection reveals that the conserved Hamiltonian of four-wave mixing is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
+This connection reveals that the conserved Hamiltonian of the coherent coupler is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
 The FS determinant framework may provide tools for generalizing these results to higher-order wave mixing processes or systems with additional degrees of freedom.
 
 % ---------- APPENDIX ------------
