@@ -428,8 +428,6 @@ N &= 2, \\
 
 This transforms \eqref{eq:uv-system} into the following system:
 \begin{align}
-\frac{\partial}{\partial z} \hat{u}_j &= \left(\frac{b_1}{4} - \frac{b_2}{2}\hat{u}_j \hat{v}_j \right) \hat{u}_j + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
-\frac{\partial}{\partial z} \hat{v}_j &= \left( - \frac{b_1}{4} + \frac{b_2}{2}\hat{u}_j \hat{v}_j\right) \hat{v}_j - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \\
 \frac{\partial}{\partial z} \hat{u}_j &= \left(b_1 - 2 b_2\hat{u}_j \hat{v}_j \right) \frac{\hat{u}_j}{N} + \prod\limits_{k=1, k \ne j}^{N} \hat{v}_k \notag \\
 \frac{\partial}{\partial z} \hat{v}_j &= \left( - b_1 + 2 b_2\hat{u}_j \hat{v}_j\right) \frac{\hat{v}_j}{N} - \prod\limits_{k=1, k \ne j}^{N} \hat{u}_k \label{eq:uv-hat-system}
 \end{align}
@@ -437,12 +435,72 @@ for which the conserved canonical Hamiltonian is:
 \begin{align}
 \hat{H} &= \prod_{l=1}^{N} \hat{u}_l + \prod_{l=1}^{N} \hat{v}_l - \frac{1}{N}\sum_{l=1}^{N} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
 \end{align}
-and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$.
+and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$. 
+To maintain the connection with the original coordinate system the value of $\hat{H}$ would be fixed at:
+\begin{equation}
+\hat{H} =  - \frac{\left({\gamma}_{1} - {\gamma}_{2}\right)^{2} {b}_{2}}{4} + {b}_{0}.
+\end{equation}
 Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}, we observe significant simplification.
 All modes now share a single propagation constant $b_1/N$ and a single self-phase modulation coefficient $2b_2/N$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 % This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
+
+\subsection{Projecting from degenerate FWM to the coherent coupler}\label{subsec:deg-fwm}
+
+In \cite{heskethCompleteWeierstrassElliptic2026}, we showed how quasi-continuous-wave FWM systems can be transformed into the following parameterless canonical Hamiltonian system of four modes $\tilde{u}_j(z), j=1,2,3,4$, and their Hamiltonian conjugates $\tilde{v}_j(z)$ (note the tilde notation):
+\begin{align}
+\tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{8} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \frac{1}{4}\left(\prod_{l=1}^{4} \tilde{u}_l + \prod_{l=1}^{4} \tilde{v}_l\right), \label{eq:H-deg-tilde}
+\end{align}
+\begin{align}
+\frac{\partial}{\partial z} \tilde{u}_j &= \frac{\partial}{\partial \tilde{v}_j} \tilde{H} = -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k, \notag \\
+\frac{\partial}{\partial z} \tilde{v}_j &= -\frac{\partial}{\partial \tilde{u}_j} \tilde{H} = \left( 1 - \frac{\tilde{u}_j \tilde{v}_j}{4}\right) \tilde{v}_j + \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k, \label{eq:uv-tilde-deg-system}
+\end{align}
+which conserves the Hamiltonian $\tilde{H}$ and, for constants  $\tilde{\gamma}_j$, three intermodal power differences (read as $j > k$ to avoid over counting):
+\begin{equation}
+\label{eq:deg-fwm-power-conserved}
+\tilde{u}_j(z) \tilde{v}_j(z) - \tilde{u}_k(z) \tilde{u}_k(z) = \tilde{\gamma}_j - \tilde{\gamma}_k.
+\end{equation}
+
+We now consider a degeneration and rescaling of this FWM system defined by the following substitutions in the Hamiltonian in \eqref{eq:H-deg-tilde} (note the bar notation on the right and the tilde notation on the left):
+\begin{align}
+  \tilde{u}_1(z) &= \varsigma \sqrt{2}\chi \,\bar{u}_1(z), \notag \\
+  \tilde{u}_2(z) &= \sqrt{2} \chi  \,\bar{u}_2(z), \notag \\
+  \tilde{u}_3(z) &= \chi  \,\bar{u}_3(z), \notag \\
+  \tilde{u}_4(z) &= \chi  \,\bar{u}_3(z), \notag \\
+  \tilde{v}_1(z) &= \varsigma \sqrt{2} \chi  \,\bar{v}_1(z), \notag \\
+  \tilde{v}_2(z) &= \sqrt{2} \chi  \,\bar{v}_2(z), \notag \\
+  \tilde{v}_3(z) &= \chi  \,\bar{v}_3(z), \notag \\
+  \tilde{v}_4(z) &= \chi  \,\bar{v}_3(z), \notag \\
+\end{align}
+where $\varsigma = \pm 1$, $\chi$ is a free parameter, and $\tilde{u}_3$ and $\tilde{u}_4$ coalesce to $\bar{u}_3$ (likewise for the corresponding conjugates) to create degeneracy and reduce four degrees of freedom (modes) to three.
+We then divide the Hamiltonian by $2 \chi^3$, which is equivalent to a change of the length variable such that $z \rightarrow 2 \chi^3 z$ (check this), to obtain the system:
+\begin{align}
+\bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 - \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, 
+\end{align}
+\begin{alignat}{2}
+  \frac{\partial}{\partial t} \bar{u}_1(z) &=  \frac{\partial}{\partial \bar{u}_1} \bar{H} &&= - \frac{\bar{u}_1}{\chi} + \frac{\chi \bar{u}_1^{2} \bar{v}_1}{2} - \frac{\varsigma \chi \bar{v}_2 \bar{v}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial t} \bar{u}_2(z) &=  \frac{\partial}{\partial \bar{u}_2} \bar{H} &&= - \frac{\bar{u}_2}{\chi} + \frac{\chi \bar{u}_2^{2} \bar{v}_2}{2} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial t} \bar{u}_3(z) &=  \frac{\partial}{\partial \bar{u}_3} \bar{H} &&= - \frac{\bar{u}_3}{\chi} + \frac{\chi \bar{u}_3^{2} \bar{v}_3}{4} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_2 \bar{v}_3}{2}, \notag \\
+  \frac{\partial}{\partial t} \bar{v}_1(z) &= -\frac{\partial}{\partial \bar{v}_1} \bar{H} &&= \frac{\bar{v}_1}{\chi} - \frac{\chi \bar{v}_1^{2} \bar{u}_1}{2} + \frac{\varsigma \chi \bar{u}_2 \bar{u}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial t} \bar{v}_2(z) &= -\frac{\partial}{\partial \bar{v}_2} \bar{H} &&= \frac{\bar{v}_2}{\chi} - \frac{\chi \bar{v}_2^{2} \bar{u}_2}{2} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial t} \bar{v}_3(z) &= -\frac{\partial}{\partial \bar{v}_3} \bar{H} &&= \frac{\bar{v}_3}{\chi} - \frac{\chi \bar{v}_3^{2} \bar{u}_3}{4} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_2 \bar{v}_3}{2}, \notag \\
+\end{alignat}
+If one defines modes $\hat{u}_j$, $\hat{v}_j$ with $j=1,2$ (note the hat notation) in terms of the $\bar{u}_k$, $\bar{v}_k$ modes as follows, with $k=1,2,3$:
+\begin{align}
+  \theta &= - {b}_{2} {\gamma}_{1} + \frac{2 {\gamma}_{1}}{{b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2}}, \notag \\
+  \hat{u}_1{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{1} - {\lambda}_{1}} \bar{u}_1{\left(z\right)} e^{z \theta}}{\bar{v}_3{\left(z\right)}}, \notag \\
+  \hat{u}_2{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{2} - {\lambda}_{1}} \bar{u}_2{\left(z\right)} e^{-z \theta}}{\bar{v}_3{\left(z\right)}}, \notag \\
+  \hat{v}_1{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{1} - {\lambda}_{1}} \bar{v}_1{\left(z\right)} e^{-z \theta}}{\bar{u}_3{\left(z\right)}}, \notag \\
+  \hat{v}_2{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{2} - {\lambda}_{1}} \bar{v}_2{\left(z\right)} e^{z \theta}}{\bar{u}_3{\left(z\right)}}, \notag \\
+\end{align}
+and sets the values of the conserved quantities in the bar coordinates in terms of parameters from the hat coordinates such that:
+\begin{align}
+2\bar{u}_1\bar{v}_1 - \bar{u}_3\bar{v}_3 &= \frac{d_5}{4\left(\gamma_1 - \lambda_1\right)}, \notag \\
+2\bar{u}_2\bar{v}_2 - \bar{u}_3\bar{v}_3 &= \frac{d_5}{4\left(\gamma_2 - \lambda_1\right)}, \notag \\
+\bar{H} &= - \frac{{b}_{2} {d}_{5}}{8} - \frac{2}{\chi} + \frac{64 \left({d}_{5} + 16 {\lambda}_{1}\right) {\lambda}_{1}}{\chi^{3} {d}_{5}^{2}}, \\
+\end{align}
+then one can confirm after some simple but lengthy algebra that the $\hat{u}_j$, $\hat{v}_j$ modes solve the system in \eqref{eq:uv-hat-system}, thus there exists a projection from degenerate FWM to the coherent coupler.
 
 
 \subsection{Reducing the quartic to a cubic via local normalisation}\label{subsec:bar-coords}
