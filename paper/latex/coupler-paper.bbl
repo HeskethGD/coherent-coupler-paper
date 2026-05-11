@@ -330,106 +330,6 @@
       \verb https://www.cambridge.org/core/books/course-of-modern-analysis/B2DDAE32B565419FA452C51FA03F6F3D
       \endverb
     \endentry
-    \entry{weilEllipticFunctionsAccording1976}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=f5987f3b70bd698e3c1139b23bb8026b}{%
-           family={Weil},
-           familyi={W\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{fullhash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{fullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{bibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorbibnamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authornamehash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorfullhash}{f5987f3b70bd698e3c1139b23bb8026b}
-      \strng{authorfullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-540-65036-2 978-3-642-66209-6}
-      \field{langid}{english}
-      \field{title}{Elliptic {{Functions}} According to {{Eisenstein}} and {{Kronecker}}}
-      \field{urlday}{11}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{year}{1976}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-642-66209-6
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-642-66209-6
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-642-66209-6
-      \endverb
-      \keyw{algebraic number theory,development,elliptic function,elliptic functions,equation,Etch,form,function,history of mathematics,Lattice,mathematics,number theory,Outlook,society,story}
-    \endentry
-    \entry{charolloisEllipticFunctionsAccording2016}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=4b00634e0c1bf026d435243270e07a1a}{%
-           family={Charollois},
-           familyi={C\bibinitperiod},
-           given={Pierre},
-           giveni={P\bibinitperiod}}}%
-        {{hash=848ddf4e0f29b737a2c2df4fa81af12b}{%
-           family={Sczech},
-           familyi={S\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{fullhash}{5facffddd10df198f54552a89b2717e6}
-      \strng{fullhashraw}{5facffddd10df198f54552a89b2717e6}
-      \strng{bibnamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorbibnamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authornamehash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorfullhash}{5facffddd10df198f54552a89b2717e6}
-      \strng{authorfullhashraw}{5facffddd10df198f54552a89b2717e6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{1027-488X}
-      \field{journaltitle}{EMS Newsletter}
-      \field{langid}{english}
-      \field{number}{101}
-      \field{shortjournal}{EMS Newsl.}
-      \field{shorttitle}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}}
-      \field{title}{Elliptic {{Functions According}} to {{Eisenstein}} and {{Kronecker}}: {{An Update}}}
-      \field{urlday}{4}
-      \field{urlmonth}{8}
-      \field{urlyear}{2025}
-      \field{volume}{2016--9}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{8\bibrangedash 14}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.4171/NEWS/101/4
-      \endverb
-      \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/EA6S346H/Charollois and Sczech - 2016 - Elliptic Functions According to Eisenstein and Kronecker An Update.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ems.press/doi/10.4171/news/101/4
-      \endverb
-      \verb{url}
-      \verb https://ems.press/doi/10.4171/news/101/4
-      \endverb
-    \endentry
     \entry{laurentPyweierstrass2022}{software}{}{}
       \name{author}{1}{}{%
         {{hash=3f501810ff9c0a4833114b7395db82e3}{%
@@ -666,8 +566,8 @@
       \strng{authornamehash}{f252038edd7f112d75da3bf0c1edecbc}
       \strng{authorfullhash}{f250109471b6de16324d417ff6e81e90}
       \strng{authorfullhashraw}{f250109471b6de16324d417ff6e81e90}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.}
@@ -738,8 +638,8 @@
       \strng{nameafullhash}{c331a21821c9e2b80ac10ca2e844160a}
       \strng{nameafullhashraw}{c331a21821c9e2b80ac10ca2e844160a}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Utilizing the modes of a multimode fiber forms a frontier between what is achievable with current fibre technology and what is required for the remainder of the 21st century. Large mode area multimode fibers accommodate the high power delivery demanded by fiber lasers used in industry for precision cutting, welding and drilling functions, and used elsewhere for the generation of white light sources used in fiber communication, medical and precision time keeping applications. This thesis explores the theory of nonlinear effects in multimode fibers with the intention of optimizing existing applications, whilst simultaneously identifying new ones.{$<$}br/{$><$}br/{$>$}A generalized multimode nonlinear Schrodinger equation is numerically solved to explore the phenomenon of self-focusing in multimode fibers, with peak powers in the megawatt regime. Temporal effects compress femtosecond pulses launched into the fundamental mode, driving peak powers up and coupling power into higher order modes; a process identified with transverse spatial contraction and increased intensity. Parameter regimes in which damage may be avoided are identified. The nonlinear interaction of two modes under continuous wave pumping is solved analytically in terms of elliptic functions.{$<$}br/{$><$}br/{$>$}The nonlinear multi frequency dynamics describing the optical regeneration of optical communication signals are researched in a scalar single mode scenario, before nonlinear effects in polarization modes are explored. In the scalar case, a modification to a phase sensitive amplifier from the literature solves the problem of phase to amplitude noise conversion during regeneration. Improved bit error rates in three modulation formats are simulated as a result and experimental collaboration demonstrates proof of principle. Polarization assisted phase sensitive amplification (PAPSA) for signal regeneration is then introduced. Polarization mode benefits include operating power and fiber length reduction, simultaneous regeneration of signal phase and amplitude, and a simple way to decompose the signal into quadrature and in-phase components. An approximate analytic theory of PAPSA is developed. Experimental collaboration demonstrates that PAPSA offers significant signal bit error rate reduction{$<$}br/{$>$}}
@@ -782,8 +682,8 @@
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Code and latex for journal publications}

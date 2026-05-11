@@ -191,7 +191,7 @@ We refer to their product $u_j v_j$ as the modal power; while this quantity is n
 \section{Conserved quantities}
 
 In this section we identify conserved quantities of the system. 
-The approach and notation follows that of \cite{heskethCompleteWeierstrassElliptic2026} adjusted for two mdoes instead of four.
+The approach and notation follows that of \cite{heskethCompleteWeierstrassElliptic2026} adjusted for two modes instead of four.
 The system in \eqref{eq:uv-system} can be formulated as the following canonical Hamiltonian system:
 \begin{align}
 \label{eq:ham-uv}
@@ -236,7 +236,7 @@ after which $\rho(z)$ is minus the mean modal power and $\gamma_j$ is the consta
 \section{Solutions for modal powers in terms of Weierstrass \texorpdfstring{$\wp$}{wp} elliptic functions}\label{sec:mode-power}
 
 In this section we give analytic solutions for modal power.
-As in the previous section, the approach and notation closely follows that of \cite{heskethCompleteWeierstrassElliptic2026} adjusted for two mdoes instead of four.
+As in the previous section, the approach and notation closely follows that of \cite{heskethCompleteWeierstrassElliptic2026} adjusted for two modes instead of four.
 The fundamental Weierstrass elliptic function theory used in this and subsequent sections can be found in \cite{whittakerCourseModernAnalysis2021}. 
 In order to obtain elliptic function solutions in wave mixing dynamics, the key observation is that the derivative of the modal power in \eqref{eq:duv_j} is proportional to the difference of the two wave mixing product terms, and that the Hamiltonian in \eqref{eq:ham-uv} contains their sum.
 We then note the simple but important identity:
@@ -257,7 +257,10 @@ with $a_0=H$ a renaming that indicates the role of $H$ here as the constant term
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= \sum_{l=0}^{4}d_l\,\rho\left(z\right)^l, \label{eq:drho-sqrd-3} \\
 \left(\frac{d}{d z} \rho{\left(z \right)}\right)^{2} &= d_4 \prod_{l=1}^{4} \left(\rho\left(z\right) -  \lambda_l\right), \label{eq:drho-sqrd-4}
 \end{align}
-where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e. $0=\sum_{k=0}^{4}d_k\,\lambda_{l}^k$.
+where $b_l$, and $d_l$ are given in terms of other parameters and initial conditions in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds}, and where $\lambda_l$ are the roots of the quartic polynomial in $\rho(z)$, i.e.:
+\begin{equation}
+\sum_{k=0}^{4}d_k\,\lambda_{l}^k = 0 \label{eq:lambda-root}
+\end{equation}
 Equation \eqref{eq:drho-sqrd-4} is a differential equation for an elliptic function and by separating phase modulation and wave mixing terms in the Hamiltonian, and by exploiting intermodal power conservation, we were able to obtain it directly without inverting elliptic integrals first.
 To solve it, we now transform \eqref{eq:drho-sqrd-4} from quartic to the standard cubic form of the Weierstrass $\wp$ function using the classical trick which can be conceptualised in three steps \cite{whittakerCourseModernAnalysis2021}:
 \begin{equation}
@@ -298,16 +301,15 @@ These special points are defined implicitly through their Weierstrass function v
 \wp{\left(z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} + \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left(- \rho{\left(0 \right)} + {\lambda}_{1}\right)}, \notag \\
 \wp'{\left(z_{0}\right)} &= \frac{\left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right) }{4 \left(\rho{\left(0 \right)} - {\lambda}_{1}\right)^{2}}\left. \frac{d}{d z} \rho{\left(z \right)} \right|_{\substack{ z=0 }}, \notag \\
 \wp{\left(z_{1}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2}, \notag \\
-\wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) \sqrt{{d}_{4}}}{4}, \notag \\
+\wp'{\left(z_{1}\right)} &= \frac{\left(- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}\right) b_2}{4}, \notag \\
 \wp{\left({\mu}_{j} - z_{0}\right)} &= \frac{{d}_{2}}{12} + \frac{{d}_{3} {\lambda}_{1}}{4} + \frac{{d}_{4} {\lambda}_{1}^{2}}{2} - \frac{- {d}_{1} - 2 {d}_{2} {\lambda}_{1} - 3 {d}_{3} {\lambda}_{1}^{2} - 4 {d}_{4} {\lambda}_{1}^{3}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)}, \notag \\
-\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}, \label{eq:wp-points}
+\wp'{\left({\mu}_{j}- z_{0}\right)} &= - \frac{\left({b}_{0} + {b}_{1} {\gamma}_{j} + {b}_{2} {\gamma}_{j}^{2}\right) \left({d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}\right)}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)^{2}}. \label{eq:wp-points}
 \end{align}
-where it is to be noted that in Appendix \ref{app:param-def-appendix} we state $d_4=b_2^2$ and here we take $\sqrt{d_4}=b_2$ and define $z_1$ accordingly.
 The solutions for modal powers are then found from \eqref{eq:uvj-gam-rho} and \eqref{eq:rho-wp-1} to be:
 \begin{align}
 u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z), \notag \\
-&= \frac{\wp'{\left(z_{1}\right)}}{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \notag \\
-&= \frac{\wp'{\left(z_{1}\right)} }{ \sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) }. \label{eq:uv-wp}
+&= \frac{\wp'{\left(z_{1}\right)}}{ b_2 \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)} - \frac{\wp'{\left(z_{1}\right)}}{b_2 \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right) }, \notag \\
+&= \frac{\wp'{\left(z_{1}\right)} }{ b_2 \left(\wp{\left(z_{1}\right)} - \wp{\left({\mu}_{j}- z_{0}\right)}\right)} \frac{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right) }{ \left(\wp{\left(z - z_{0}\right)} - \wp{\left(z_{1}\right)}\right) }. \label{eq:uv-wp}
 \end{align}
 
 
@@ -335,10 +337,10 @@ We substitute the modal power solution \eqref{eq:uv-wp} into \eqref{eq:dlog-u-v-
 \end{equation}
 which allows us to express the right-hand side in terms of Weierstrass $\zeta$ functions and constants:
 \begin{align}
-\frac{\frac{\partial}{\partial z} u{\left(z,{\mu}_{j} \right)}}{u{\left(z,{\mu}_{j} \right)}} =& \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
+\frac{\frac{\partial}{\partial z} u{\left(z,{\mu}_{j} \right)}}{u{\left(z,{\mu}_{j} \right)}} =& \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{b_2} \nonumber \\[6pt]
 & + \zeta{\left(z - 2 z_{0} + {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
 & - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2} + {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} \notag \\[12pt]
-\frac{\frac{\partial}{\partial z} v{\left(z,{\mu}_{j} \right)}}{v{\left(z,{\mu}_{j} \right)}} =& - \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} \nonumber \\[6pt]
+\frac{\frac{\partial}{\partial z} v{\left(z,{\mu}_{j} \right)}}{v{\left(z,{\mu}_{j} \right)}} =& - \frac{\left(\zeta{\left(z - z_{0} + z_{1} \right)} - 2 \zeta{\left(z_{1} \right)} - \zeta{\left(z - z_{0} - z_{1} \right)}\right) {\Lambda}_{1,j}}{b_2} \nonumber \\[6pt]
 & + \zeta{\left(z - {\mu}_{j} \right)} - \frac{\zeta{\left(z - z_{0} - z_{1} \right)}}{2} - \frac{\zeta{\left(z - z_{0} + z_{1} \right)}}{2} \nonumber \\[6pt]
 & + \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} + \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1} \right)}}{2} - {\Lambda}_{0,j} - {\Lambda}_{1,j} {\lambda}_{1}. \label{eq:dlog-u-v-zeta}
 \end{align}
@@ -354,9 +356,9 @@ v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \
 \end{align}
 where the branch of the logarithm is chosen continuously along the integration path from $z=0$, $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its conjugate, and the other constants are:
 \begin{align}
-W_j &= \frac{\wp'{\left(z_{1} \right)}}{\sqrt{{d}_{4}}\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
-r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{\sqrt{{d}_{4}}} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
-r_{1,j} &= \frac{{\Lambda}_{1,j}}{\sqrt{{d}_{4}}},
+W_j &= \frac{\wp'{\left(z_{1} \right)}}{b_2\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
+r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{b_2} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
+r_{1,j} &= \frac{{\Lambda}_{1,j}}{b_2},
 \end{align}
 and it can be shown that:
 \begin{equation}
@@ -367,32 +369,6 @@ These solutions are valid for all initial conditions without approximation.
 We show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
 This provides a deeper structural understanding of how the Hamiltonian is conserved and connects the four-wave mixing system to the broader theory of elliptic functions.
 
-% ---------- SECTION -------------
-% --------------------------------
-
-\section{When quartic terms cancel through special parameter values}
-
-In this section we examine a special case in which the quartic polynomial in $\rho(z)$ reduces to a cubic, leading to simplified solutions.
-This can occur when specific relationships hold among the system parameters, but it is not achievable through choice of initial conditions alone, nor is it related to the general coordinate transformation we introduce in Section \ref{sec:coord-transforms}.
-Rather, this is a special instance of the original physical system \eqref{eq:jensen} where parameters satisfy particular constraints.
-
-The quartic term in \eqref{eq:drho-sqrd-4} vanishes when $d_4=0$, which requires $b_2 = \pm 2$.
-This is a parameter-level constraint that depends on the fiber properties and operating conditions.
-When $d_4=0$, we have $\wp'(z_1)=0$, meaning that $z_1$ is congruent to a half-period of the elliptic function, commonly denoted $\omega_i$ for $i=1,2,3$.
-It follows either by solving the differential equation starting from the cubic, or by applying elliptic function identities to intermediate results in the quartic derivation,
-that the solutions for modes simplify to:
-\begin{align}
-u_j{\left(z\right)} &= \frac{\alpha_j\, 2 \sigma{\left(z - 2 z_{0} + 2 z_{1} + {\mu}_{j}\right)} \exp\left( z \left( {\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}} {\Lambda}_{1,j} -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \notag \\[12pt]
-v_j{\left(z\right)} &= \frac{2 \sigma{\left(z - {\mu}_{j}\right)} \exp\left( - z \left({\Lambda}_{0,j} + \frac{{d}_{2}}{3 {d}_{3}}{\Lambda}_{1,j}  -\zeta{\left({\mu}_{j} -z_{0} + z_{1}\right)}\right) \right)}{ \alpha_j\, \sqrt{{d}_{3}}\, \sigma{\left({\mu}_{j} - z_{0} + z_{1}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}} \label{eq:u-v-cubic}
-\end{align}
-where the integration constant $\alpha_j$ is to be determined by initial conditions using \eqref{eq:u-v-cubic} and does not therefore take the same value as in \eqref{eq:u-v-quartic}, but where all other parameters retain their prior definitions.
-The modal power simplies to:
-\begin{equation}
-\label{eq:modal-power-cubic}
-u_j{\left(z\right)} v_j{\left(z\right)} = \frac{4 \wp{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{{d}_{3}} - \frac{4 \wp{\left(z - z_{0} + z_{1}\right)}}{{d}_{3}}
-\end{equation}
-We emphasize that this is a special case arising from particular parameter values in the four-wave mixing system \eqref{eq:jensen}.
-It should be clearly distinguished from the canonical coordinate transformation presented in Section \ref{sec:coord-transforms}, which is a general nonlinear transformation applicable to any four-wave mixing system that reduces the quartic to a cubic by transforming the variables themselves rather than requiring special parameter values.
 
 % ---------- SECTION -------------
 % --------------------------------
@@ -445,10 +421,21 @@ All modes now share a single propagation constant $b_1/N$ and a single self-phas
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
 % This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
-
+The solutions are:
+\begin{align}
+\hat{u}_j{\left(z\right)} &= \frac{{\hat{\alpha}}_{j} \sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{z\left( {r}_{0,j} -\left(-1\right)^{j} {\beta}\right)} }{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} - z_{1}\right)}}, \notag \\
+\hat{v}_j{\left(z\right)} &= \frac{\sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - {\mu}_{j}\right)} e^{-z\left( {r}_{0,j} -\left(-1\right)^{j} {\beta} \right)}}{ {\hat{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}},
+\end{align}
+where:
+\begin{equation}
+\beta = \frac{\left(- {r}_{1,1} + {r}_{1,2}\right) \left(- 2 \zeta{\left(z_{1}\right)} + {b}_{2} {\gamma}_{1} + {b}_{2} {\lambda}_{1}\right)}{2} - 2 {a}_{1,2} {\gamma}_{1} - {a}_{2} - \frac{{b}_{1}}{2}
+\end{equation}
+LOOK AT SIMPLIFYING beta r0j using LAM0
 \subsection{Projecting from degenerate FWM to the coherent coupler}\label{subsec:deg-fwm}
+In this section we will show how the coherent coupler system in \eqref{eq:uv-system} is essentially equivalent to a degenerate four-wave mixing (FWM) system that one finds in nonlinear fiber optics. 
+To be more precise, we will show that there is a projection from the three mode degenerate FWM system to the two mode coherent coupler system.
 
-In \cite{heskethCompleteWeierstrassElliptic2026}, we showed how quasi-continuous-wave FWM systems can be transformed into the following parameterless canonical Hamiltonian system of four modes $\tilde{u}_j(z), j=1,2,3,4$, and their Hamiltonian conjugates $\tilde{v}_j(z)$ (note the tilde notation):
+To start, let us recall that in \cite{heskethCompleteWeierstrassElliptic2026} we showed how quasi-continuous-wave FWM systems can be transformed into the following parameterless non-degenerate canonical Hamiltonian system of four modes $\tilde{u}_j(z), j=1,2,3,4$, and their Hamiltonian conjugates $\tilde{v}_j(z)$ (note the tilde notation):
 \begin{align}
 \tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{8} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \frac{1}{4}\left(\prod_{l=1}^{4} \tilde{u}_l + \prod_{l=1}^{4} \tilde{v}_l\right), \label{eq:H-deg-tilde}
 \end{align}
@@ -462,7 +449,7 @@ which conserves the Hamiltonian $\tilde{H}$ and, for constants  $\tilde{\gamma}_
 \tilde{u}_j(z) \tilde{v}_j(z) - \tilde{u}_k(z) \tilde{u}_k(z) = \tilde{\gamma}_j - \tilde{\gamma}_k.
 \end{equation}
 
-We now consider a degeneration and rescaling of this FWM system defined by the following substitutions in the Hamiltonian in \eqref{eq:H-deg-tilde} (note the bar notation on the right and the tilde notation on the left):
+We will now consider a degeneration and rescaling of this FWM system defined by the following substitutions in the Hamiltonian in \eqref{eq:H-deg-tilde} (note the bar notation on the right and the tilde notation on the left):
 \begin{align}
   \tilde{u}_1(z) &= \varsigma \sqrt{2}\chi \,\bar{u}_1(z), \notag \\
   \tilde{u}_2(z) &= \sqrt{2} \chi  \,\bar{u}_2(z), \notag \\
@@ -474,134 +461,80 @@ We now consider a degeneration and rescaling of this FWM system defined by the f
   \tilde{v}_4(z) &= \chi  \,\bar{v}_3(z), \notag \\
 \end{align}
 where $\varsigma = \pm 1$, $\chi$ is a free parameter, and $\tilde{u}_3$ and $\tilde{u}_4$ coalesce to $\bar{u}_3$ (likewise for the corresponding conjugates) to create degeneracy and reduce four degrees of freedom (modes) to three.
-We then divide the Hamiltonian by $2 \chi^3$, which is equivalent to a change of the length variable such that $z \rightarrow 2 \chi^3 z$ (check this), to obtain the system:
+We then divide the Hamiltonian by $2 \chi^3$, which is equivalent to a change of the length variable such that $z \rightarrow 2 \chi^3 z$ (check this), to obtain the degenerate FWM system that we will start from:
 \begin{align}
-\bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 - \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, 
+\bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 - \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, \label{eq:Hbar-deg-fem}
 \end{align}
-\begin{alignat}{2}
-  \frac{\partial}{\partial t} \bar{u}_1(z) &=  \frac{\partial}{\partial \bar{u}_1} \bar{H} &&= - \frac{\bar{u}_1}{\chi} + \frac{\chi \bar{u}_1^{2} \bar{v}_1}{2} - \frac{\varsigma \chi \bar{v}_2 \bar{v}_3^{2}}{4}, \notag \\
-  \frac{\partial}{\partial t} \bar{u}_2(z) &=  \frac{\partial}{\partial \bar{u}_2} \bar{H} &&= - \frac{\bar{u}_2}{\chi} + \frac{\chi \bar{u}_2^{2} \bar{v}_2}{2} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_3^{2}}{4}, \notag \\
-  \frac{\partial}{\partial t} \bar{u}_3(z) &=  \frac{\partial}{\partial \bar{u}_3} \bar{H} &&= - \frac{\bar{u}_3}{\chi} + \frac{\chi \bar{u}_3^{2} \bar{v}_3}{4} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_2 \bar{v}_3}{2}, \notag \\
-  \frac{\partial}{\partial t} \bar{v}_1(z) &= -\frac{\partial}{\partial \bar{v}_1} \bar{H} &&= \frac{\bar{v}_1}{\chi} - \frac{\chi \bar{v}_1^{2} \bar{u}_1}{2} + \frac{\varsigma \chi \bar{u}_2 \bar{u}_3^{2}}{4}, \notag \\
-  \frac{\partial}{\partial t} \bar{v}_2(z) &= -\frac{\partial}{\partial \bar{v}_2} \bar{H} &&= \frac{\bar{v}_2}{\chi} - \frac{\chi \bar{v}_2^{2} \bar{u}_2}{2} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_3^{2}}{4}, \notag \\
-  \frac{\partial}{\partial t} \bar{v}_3(z) &= -\frac{\partial}{\partial \bar{v}_3} \bar{H} &&= \frac{\bar{v}_3}{\chi} - \frac{\chi \bar{v}_3^{2} \bar{u}_3}{4} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_2 \bar{v}_3}{2}, \notag \\
-\end{alignat}
-If one defines modes $\hat{u}_j$, $\hat{v}_j$ with $j=1,2$ (note the hat notation) in terms of the $\bar{u}_k$, $\bar{v}_k$ modes as follows, with $k=1,2,3$:
 \begin{align}
-  \theta &= - {b}_{2} {\gamma}_{1} + \frac{2 {\gamma}_{1}}{{b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2}}, \notag \\
+  \frac{\partial}{\partial z} \bar{u}_j(z) &=  \frac{\partial}{\partial \bar{v}_j} \bar{H}, \notag \\
+  \frac{\partial}{\partial z} \bar{v}_j(z) &=  -\frac{\partial}{\partial \bar{u}_1} \bar{H}, \notag
+\end{align}
+\begin{align}
+  \frac{\partial}{\partial z} \bar{u}_1(z) &=  - \frac{\bar{u}_1}{\chi} + \frac{\chi \bar{u}_1^{2} \bar{v}_1}{2} - \frac{\varsigma \chi \bar{v}_2 \bar{v}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial z} \bar{u}_2(z) &=  - \frac{\bar{u}_2}{\chi} + \frac{\chi \bar{u}_2^{2} \bar{v}_2}{2} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial z} \bar{u}_3(z) &=  - \frac{\bar{u}_3}{\chi} + \frac{\chi \bar{u}_3^{2} \bar{v}_3}{4} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_2 \bar{v}_3}{2}, \notag \\
+  \frac{\partial}{\partial z} \bar{v}_1(z) &= \frac{\bar{v}_1}{\chi} - \frac{\chi \bar{v}_1^{2} \bar{u}_1}{2} + \frac{\varsigma \chi \bar{u}_2 \bar{u}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial z} \bar{v}_2(z) &= \frac{\bar{v}_2}{\chi} - \frac{\chi \bar{v}_2^{2} \bar{u}_2}{2} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_3^{2}}{4}, \notag \\
+  \frac{\partial}{\partial z} \bar{v}_3(z) &= \frac{\bar{v}_3}{\chi} - \frac{\chi \bar{v}_3^{2} \bar{u}_3}{4} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_2 \bar{v}_3}{2}, \label{eq:ubar-vbar-degfwm-system}
+\end{align}
+We will be showing that there is a projection from \eqref{eq:ubar-vbar-degfwm-system} to \eqref{eq:uv-system}.
+
+Let us define modes $\hat{u}_j$, $\hat{v}_j$ with $j=1,2$ (note the hat notation), in terms of $\bar{u}_k$, $\bar{v}_k$ modes with $k=1,2,3$, as follows:
+\begin{align}
   \hat{u}_1{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{1} - {\lambda}_{1}} \bar{u}_1{\left(z\right)} e^{z \theta}}{\bar{v}_3{\left(z\right)}}, \notag \\
   \hat{u}_2{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{2} - {\lambda}_{1}} \bar{u}_2{\left(z\right)} e^{-z \theta}}{\bar{v}_3{\left(z\right)}}, \notag \\
   \hat{v}_1{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{1} - {\lambda}_{1}} \bar{v}_1{\left(z\right)} e^{-z \theta}}{\bar{u}_3{\left(z\right)}}, \notag \\
-  \hat{v}_2{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{2} - {\lambda}_{1}} \bar{v}_2{\left(z\right)} e^{z \theta}}{\bar{u}_3{\left(z\right)}}, \notag \\
+  \hat{v}_2{\left(z\right)} &= \frac{\sqrt{2} \sqrt{{\gamma}_{2} - {\lambda}_{1}} \bar{v}_2{\left(z\right)} e^{z \theta}}{\bar{u}_3{\left(z\right)}}, \label{eq:projection-hat-as-bars}
 \end{align}
-and sets the values of the conserved quantities in the bar coordinates in terms of parameters from the hat coordinates such that:
-\begin{align}
-2\bar{u}_1\bar{v}_1 - \bar{u}_3\bar{v}_3 &= \frac{d_5}{4\left(\gamma_1 - \lambda_1\right)}, \notag \\
-2\bar{u}_2\bar{v}_2 - \bar{u}_3\bar{v}_3 &= \frac{d_5}{4\left(\gamma_2 - \lambda_1\right)}, \notag \\
-\bar{H} &= - \frac{{b}_{2} {d}_{5}}{8} - \frac{2}{\chi} + \frac{64 \left({d}_{5} + 16 {\lambda}_{1}\right) {\lambda}_{1}}{\chi^{3} {d}_{5}^{2}}, \\
-\end{align}
-then one can confirm after some simple but lengthy algebra that the $\hat{u}_j$, $\hat{v}_j$ modes solve the system in \eqref{eq:uv-hat-system}, thus there exists a projection from degenerate FWM to the coherent coupler.
-
-
-\subsection{Reducing the quartic to a cubic via local normalisation}\label{subsec:bar-coords}
-
-The second transformation is a coordinate change involving a $z$-dependent normalisation of the modes, which induces a M\"obius transformation on the modal powers. 
-This implements the quartic to cubic reduction discussed in Section~\ref{sec:mode-power}, but here the effect is delivered at the level of the modes $u_j, v_j$ themselves rather than only at the modal power level $u_j v_j$, allowing us to observe corresponding changes in the coupled differential equations.
-The transformation further reduces the number of parameters such that the propagation constant becomes the reciprocal of the SPM coefficient.
-
-Let us define the local normalisation function $h(z)$ and its associated coordinate transform $\left(\hat{u}_j, \hat{v}_j\right) \rightarrow \left(\bar{u}_j, \bar{v}_j \right)$ (note the hat to bar change in notation):
-\begin{align}
-\hat{u}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)} \frac{\bar{u}_j(z) e^{-\theta_j z}}{\sqrt{h{\left(z \right)}}} \notag \\
-\hat{v}_j(z) &= 2 \sqrt{{\lambda}_{1} \left({\gamma}_{j} - {\lambda}_{1}\right)}  \frac{\bar{v}_j(z) e^{\theta_j z} }{\sqrt{h{\left(z \right)}}} \notag \\
-h{\left(z \right)} &= {d}_{5} - \sum_{l=1}^{4} \left({\gamma}_{l} - {\lambda}_{1}\right) \bar{u}_l \bar{v}_l = 4 {\lambda}_{1} \bar{u}_j \bar{v}_j - \frac{{\lambda}_{1}{d}_{5} }{{\gamma}_{j} - {\lambda}_{1}} \label{eq:hat-to-bar}
-\end{align}
-where $\theta_j$ and $d_5$ are given in Appendix \ref{app:bar-coords-params}. 
-The $\theta_j$ parameter is not involved in the reduction of the quartic to the cubic but its inclusion keeps the propagation constant the same for all modes after the transform.
-The key parameter in the transformation is the root $\lambda_1$ previously defined in Section \ref{sec:mode-power} for the purpose of quartic to cubic reduction.
-The normalisation function $h(z)$ is constructed specifically to eliminate the factor $\sqrt{\wp(z_1) - \wp(z - z_0)}$ that appears in the denominator of \eqref{eq:u-v-quartic}.
-We therefore already know its effect on the solutions through the simple application in \eqref{eq:hat-to-bar}, but it is fascinating to observe the corresponding effect on the differential equations.
-
-The transformation in \eqref{eq:hat-to-bar} sends \eqref{eq:uv-hat-system} to:
-\begin{align}
-\frac{\partial}{\partial z} \bar{u}_j &= -\left(\frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j \right) \bar{u}_j - \frac{\varsigma \chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
-\frac{\partial}{\partial z} \bar{v}_j &= \left( \frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j\right) \bar{v}_j + \frac{\varsigma \chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{u}_k \label{eq:uv-bar-system}
-\end{align}
-for which the conserved canonical Hamiltonian and intermodal power conservation laws are:
-\begin{align}
-\bar{H} &= \sum_{l=1}^{4} \left(\frac{\chi}{8} \bar{u}^{2}_l \bar{v}^{2}_l  - \frac{1}{\chi}  \bar{u}_l \bar{v}_l \right) - \frac{\varsigma \chi}{4} \left(\prod_{l=1}^{4} \bar{u}_l + \prod_{l=1}^{4} \bar{v}_l\right), \notag \\
-\bar{\gamma}_j - \bar{\gamma}_k &= \bar{u}_j \bar{v}_j - \bar{u}_k \bar{v}_k,
-\end{align}
-with $\varsigma =\pm 1$, $\chi$ and $\bar{\gamma}_j$ given in Appendix \ref{app:bar-coords-params}.
-The modal power in these coordinates evolves according to:
+where:
 \begin{equation}
-\label{eq:duv_bar_j} 
-\frac{d}{d z} \bar{u}_j \bar{v}_j = -\frac{\varsigma \chi}{4}\left(\prod\limits_{k=1}^{4} \bar{u}_k - \prod\limits_{k=1}^{4} \bar{v}_k\right)
+\theta = - {b}_{2} {\gamma}_{1} + \frac{2 {\gamma}_{1}}{{b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2}},
 \end{equation}
+and where $\gamma_1, \gamma_2, b_0, b_1, b_2$ all retain their definitions given in Appendices \ref{app:param-def-appendix} and \ref{app:init-conds} for the two mode coherent coupler system, and $\lambda_1$ remains the chosen root of \eqref{eq:lambda-root}.
+Let us then set the values of the conserved quantities in the degenerate FWM system (bar coordinates) in terms of parameters from the coherent coupler system (hat coordinates). 
+To do this, we first define the constant $d_5$ in terms of $\lambda_1$ and the other $d_j$ parameters from the coherent coupler system given in Appendix \ref{app:param-def-appendix} such that:
+\begin{equation}
+{d}_{5} = {d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3},
+\end{equation}
+then we fix the following relationship betwen the intermodal power constants $\bar{\gamma}_j$ in the degenerate FWM system and the $\gamma_k$ of the coherent coupler system such that:
+\begin{alignat}{2}
+\bar{u}_1\bar{v}_1 - \bar{u}_2\bar{v}_2 &= \bar{\gamma}_1 - \bar{\gamma}_2 &&= \frac{{d}_{5} {\gamma}_{1}}{4 \left({\gamma}_{1}^{2} -  {\lambda}_{1}^{2}\right)}, \notag \\
+2\bar{u}_1\bar{v}_1 - \bar{u}_3\bar{v}_3 &= 2\bar{\gamma}_1 - \bar{\gamma}_3 &&= \frac{d_5}{4\left(\gamma_1 - \lambda_1\right)}, \notag \\
+2\bar{u}_2\bar{v}_2 - \bar{u}_3\bar{v}_3 &= 2\bar{\gamma}_2 - \bar{\gamma}_3 &&= \frac{d_5}{4\left(\gamma_2 - \lambda_1\right)},
+\end{alignat}
+where as always by definition:
+\begin{equation}
+\sum_{j=1}^{3} {\bar{\gamma}}_{j} = \sum_{j=1}^{2} {\gamma}_{j} = 0.
+\end{equation}
+We then fix the free parameter $\chi$ in the degenerate FWM system in terms of parameters from the coherent coupler system such that:
+\begin{equation}
+  \chi = \frac{8 \left( {b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2} \right)}{{d}_{5}}
+\end{equation}
+and the Hamiltonian in the degnerate FWM system takes the value:
+\begin{equation}
+  \bar{H} = - \frac{{b}_{2} {d}_{5}}{8} - \frac{2}{\chi} + \frac{64 \left({d}_{5} + 16 {\lambda}_{1}\right) {\lambda}_{1}}{\chi^{3} {d}_{5}^{2}}.
+\end{equation}
+With these paramater relationships the projection is fully defined and one can then verify that by differentiating \eqref{eq:projection-hat-as-bars} with respect to $z$, substituting the differential equations in \eqref{eq:ubar-vbar-degfwm-system} into the right hand side,
+then replacing the ratios of modes in bar coordinates for those in hat coordinates using \eqref{eq:projection-hat-as-bars}, and simplifying using the Hamiltonian in \eqref{eq:Hbar-deg-fem},
+that one recovers the two mode coherent coupler system in \eqref{eq:uv-hat-system}.
+Thus it is established that there exists a projection from degenerate FWM to the coherent coupler.
 
-Remarkably, the terms in \eqref{eq:uv-bar-system} are the same as those in \eqref{eq:uv-hat-system} only with different coefficients. 
-We thus say that the system is invariant under the transformation, which is quite surprising given the $z$ dependence of the normalisation.
-Similarly, by comparing \eqref{eq:duv_bar_j} to \eqref{eq:duv_j} we see that \eqref{eq:duv_j} is invariant up to a constant factor.
-
-To solve this system, we may define the function $\bar{w}(z)$ in terms of $h$ by:
+The solutions to \eqref{eq:ubar-vbar-degfwm-system} are for $j=1,2,3$:
 \begin{align}
-h{\left(z \right)} = \frac{\left({d}_{2} + 3 {d}_{3} {\lambda}_{1} + 6 {d}_{4} {\lambda}_{1}^{2}\right) {\lambda}_{1}}{3} - 4 \bar{w}{\left(z \right)} {\lambda}_{1}
+\bar{u}_j{\left(z\right)} &= \sqrt{\frac{s\left(j\right)}{2}}\frac{{\bar{\alpha}}_{j}\sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{z \left(\frac{\chi {\bar{\gamma}}_{j}}{s{\left(j \right)}} - \zeta{\left({\mu}_{j} - z_{0}\right)} + \frac{1}{\chi}\right)}}{\sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)  }}, \notag \\
+\bar{v}_j{\left(z\right)} &= \sqrt{\frac{s\left(j\right)}{2}}\frac{\sigma{\left(z - {\mu}_{j}\right)} e^{- z \left(\frac{\chi {\bar{\gamma}}_{j}}{s{\left(j \right)}} - \zeta{\left({\mu}_{j} - z_{0}\right)} + \frac{1}{\chi}\right)}}{{\bar{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)} }, \notag \\
+\bar{u}_j{\left(z\right)} \bar{v}_j{\left(z\right)} &= \frac{s{\left(j \right)}}{2}\left(\wp{\left({\mu}_{j} - z_{0} \right)} - \wp{\left(z - z_{0}\right)}\right)
 \end{align}
-and we find then that:
-\begin{align}
-\left(\frac{d}{d z} \bar{w}{\left(z \right)}\right)^{2} &= 4\,\bar{w}{\left(z \right)}^3 - g_2\,\bar{w}{\left(z \right)} - g_3, \notag \\
-\bar{w}(z) &= \wp (z - z_0) \label{eq:dwp-bar} \\
-h(z) &= 4\lambda_1\left(\wp (z_1) - \wp (z - z_0)\right) \label{eq:dwp-h-bar} \\
-\bar{u}_j(z)\bar{v}_j(z) &= \wp(\mu_j - z_0) - \wp(z - z_0)
-\end{align}
-where $z_0$, $z_1$, $\mu_j$, $g_2$, and $g_3$ retain their previous definitions from the original coordinates. 
-We see that as a result of the transformation in \eqref{eq:hat-to-bar}, the right hand side of \eqref{eq:dwp-bar} is cubic in $\bar{w}$ and thus the corresponding differential equations for $h$ and $\bar{u}_j\bar{v}_j$ inherit this simplification as they are linearly related.
-The elliptic function form of $h(z)$ in \eqref{eq:dwp-h-bar} confirms that it successfully eliminates the corresponding factor from the denominator in \eqref{eq:u-v-quartic}.
+where $\bar{\alpha}_j$ is an integration constant that captures initial relative phase offsets between modes and can be used to equate initial conditions between the degenerate FWM and coherent coupler systems, $s(j)$ is the degeneracy weight such that $s(1)=s(2)=1$ and $s(3)=2$, the new third $\mu_j$ constant is $\mu_3 = z_1 + z_0$, the elliptic functions use invariants $g_2, g_3$, and $\mu_1, \mu_2, z_0, z_1, g_2, g_3$ share the same definitions and values as those given in Section~\ref{sec:mode-power} for the coherent coupler, thereby connecting the two systems. 
+% The solutions in both \eqref{eq:u-v-bar} and \eqref{eq:u-v-tilde} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
+% These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
+% Importantly, whilst the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
+% The solutions are quasi-periodic, and modulo the period lattice they have zeros where the numerator $\sigma$ function vanishes and poles where the denominator $\sigma$ function vanishes.
 
-The solutions for modes $\bar{u}_j, \bar{v}_j$ are:
-\begin{align}
-\bar{u}_j(z) &= \frac{\bar{\alpha}_{j} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} \exp{\left( z \bar{\kappa}_j\right)} }{\sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)}} \notag \\
-\bar{v}_j(z) &= \frac{\sigma{\left(z - {\mu}_{j}\right)} \exp{\left(- z \bar{\kappa}_j\right)}}{\bar{\alpha}_{j} \sigma{\left(z - z_{0}\right)} \sigma{\left({\mu}_{j} - z_{0}\right)} } \label{eq:u-v-bar}
-\end{align}
-where the Weierstrass $\sigma$ functions use the same $g_2,g_3$ from the original coordinates, 
-$\bar{\kappa}_j$ is given in Appendix \ref{app:bar-coords-params}, and $\bar{\alpha}_j$ is an integration constant fixed by initial conditions and used to capture any relative phase offset between a mode $\bar{u}_j$ and its conjugate $\bar{v}_j$.
+% The Kronecker theta form establishes a direct connection with other integrable nonlinear optical systems, including two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, suggesting a unified mathematical framework across different parametric processes.
 
-\subsection{A parameterless system via rescaling}\label{subsec:tilde-coords}
-
-The final transformation is a simple rescaling that eliminates all remaining parameters from the system.
-We scale the modes and the propagation variable as follows (note the bar to tilde notation change):
-\begin{align}
-\bar{u}_j(z) &= \frac{\varsigma \sqrt[4]{\varsigma}}{\chi}\tilde{u}_j(\xi), \notag \\
-\bar{v}_j(z) &= \frac{\varsigma }{\sqrt[4]{\varsigma}\,\chi}\tilde{v}_j(\xi), \notag \\
-z &= \chi\xi
-\end{align}
-where the specific form of the mode scaling is chosen to yield parameterless coefficients in the transformed equations (whilst retaining a coefficient of 4 in the cubic term of the corresponding differential equations as per the Weierstrass form).
-This substitution transforms \eqref{eq:uv-bar-system} to:
-\begin{align}
-\frac{\partial}{\partial \xi} \tilde{u}_j &= -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k, \notag \\
-\frac{\partial}{\partial \xi} \tilde{v}_j &= \left( 1 - \frac{\tilde{u}_j \tilde{v}_j}{4}\right) \tilde{v}_j + \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k, \label{eq:uv-tilde-system}
-\end{align}
-
-for which the conserved canonical Hamiltonian is:
-\begin{align}
-\tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{8} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \frac{1}{4}\left(\prod_{l=1}^{4} \tilde{u}_l + \prod_{l=1}^{4} \tilde{v}_l\right), \label{eq:H-tilde}
-\end{align}
-
-and the solutions are:
-\begin{align}
-\tilde{u}_j{\left(\xi\right)} &= \frac{\tilde{\epsilon}_{j} \,\sigma{\left(\xi - 2 \xi_{0} + {\tilde{\mu}}_{j}\right)} \exp\left({\xi \left( 1 + \frac{{\tilde{\gamma}}_{j}}{2} - \zeta{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}\right)}\right)}{\sigma{\left(\xi - \xi_{0}\right)} \sigma{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}}, \notag \\
-\tilde{v}_j{\left(\xi\right)} &= \frac{ \sigma{\left(\xi - {\tilde{\mu}}_{j}\right)} \exp\left({-\xi \left( 1 + \frac{{\tilde{\gamma}}_{j}}{2} - \zeta{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}\right)}\right)}{\tilde{\epsilon}_{j} \,\sigma{\left(\xi - \xi_{0}\right)} \sigma{\left( {\tilde{\mu}}_{j} - \xi_{0}\right)}}  \label{eq:u-v-tilde}
-\end{align}
-where the $\sigma$ and $\zeta$ functions use the scaled invariants $\tilde{g}_2$ and $\tilde{g}_3$ given in Appendix \ref{app:scaled-params} together with $\xi_0$, $\tilde{\epsilon}_j$, $\tilde{\mu}_j$ and $\tilde{\gamma}_j$.
-
-The solutions in both \eqref{eq:u-v-bar} and \eqref{eq:u-v-tilde} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
-These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
-Importantly, whilst the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
-The solutions are quasi-periodic, and modulo the period lattice they have zeros where the numerator $\sigma$ function vanishes and poles where the denominator $\sigma$ function vanishes.
-
-The Kronecker theta form establishes a direct connection with other integrable nonlinear optical systems, including two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, suggesting a unified mathematical framework across different parametric processes.
-
-Owing to the parameter-free form of \eqref{eq:uv-tilde-system}, the simple structure of the Hamiltonian \eqref{eq:H-tilde}, and the elegant Kronecker theta function solutions in \eqref{eq:u-v-tilde}, we refer to $\tilde{u}_j, \tilde{v}_j$ as the canonical coordinates of four-wave mixing.
-The derivation of this canonical form, together with the demonstration that it can be reached from any physical four-wave mixing system through the sequence of transformations presented in this section, constitutes the second main result of this paper.
+% Owing to the parameter-free form of \eqref{eq:uv-tilde-system}, the simple structure of the Hamiltonian \eqref{eq:H-tilde}, and the elegant Kronecker theta function solutions in \eqref{eq:u-v-tilde}, we refer to $\tilde{u}_j, \tilde{v}_j$ as the canonical coordinates of four-wave mixing.
+% The derivation of this canonical form, together with the demonstration that it can be reached from any physical four-wave mixing system through the sequence of transformations presented in this section, constitutes the second main result of this paper.
 
 
 
@@ -804,7 +737,7 @@ where in our case $\gamma_j=\rho(\mu_j)$ and the sum over $b_l \gamma_j$ can be 
 We can then use \eqref{eq:uv-wp} to express $\rho$ in terms of $\wp$ so that we can substitute all variables in \eqref{eq:poly-interp} for values in terms of $\wp, \wp'$. 
 We then divide both sides of \eqref{eq:fs-det-start} by:
 \begin{align}
-\frac{\wp'{\left(z_{1}\right)}}{\sqrt{{d}_{4}} \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
+\frac{\wp'{\left(z_{1}\right)}}{b_2 \left(\wp{\left(z_{1}\right)} - \wp{\left(z - z_{0}\right)}\right)^2 }
 \end{align}
 and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to constant factors that may look different but can be shown to be identical by evaluating at $z\rightarrow z + z_0$, multiplying by $\sigma(z)^4$, and taking $z\rightarrow 0$.
 

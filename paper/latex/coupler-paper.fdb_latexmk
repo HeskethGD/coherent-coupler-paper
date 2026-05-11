@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber latex/coupler-paper"] 1777222357.22094 "latex/coupler-paper.bcf" "latex/coupler-paper.bbl" "latex/coupler-paper" 1777248395.65159 0
+["biber latex/coupler-paper"] 1778425799.28929 "latex/coupler-paper.bcf" "latex/coupler-paper.bbl" "latex/coupler-paper" 1778458912.58352 0
   "Coherent-Coupler.bib" 1777076260.82109 24073 a000c9193dcccf02aaf2f53c8500bc49 ""
-  "latex/coupler-paper.bcf" 1777248395.57994 110106 f07f9784084887e1cb1bd827a8b4f90d "pdflatex"
+  "latex/coupler-paper.bcf" 1778458912.49964 109742 4aafae7080845d8500b44cd1f05d5690 "pdflatex"
   (generated)
   "latex/coupler-paper.bbl"
   "latex/coupler-paper.blg"
   (rewritten before read)
-["pdflatex"] 1777248394.55836 "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" "latex/coupler-paper.pdf" "coupler-paper" 1777248395.65184 0
-  "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" 1777248393.11967 80670 6fccc516602835022a1d668e6c17f3c0 ""
+["pdflatex"] 1778458911.39239 "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" "latex/coupler-paper.pdf" "coupler-paper" 1778458912.58381 0
+  "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" 1778458911.13814 73980 aa324f2e4d21924adcf560823a0c122e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -64,6 +64,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -145,12 +146,12 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1767117489 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1767117381 3345747 f63bc61d33022117040a9f04f0c0b490 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "coupler-paper.tex" 1777248393.11967 80670 6fccc516602835022a1d668e6c17f3c0 ""
+  "coupler-paper.tex" 1778458911.13814 73980 aa324f2e4d21924adcf560823a0c122e ""
   "iopjournal.cls" 1776598911.95477 5945 a926ce0cbf85e8cf61e19f761ed71d40 ""
-  "latex/coupler-paper.aux" 1777248395.57682 16632 52a9d81abe07535b674b31f7f0aba789 "pdflatex"
-  "latex/coupler-paper.bbl" 1777222366.71411 47589 a1a97beac54a30141a99767801af111c "biber latex/coupler-paper"
-  "latex/coupler-paper.out" 1777248395.57897 5344 497a4a60fea631ebaadddb69d977d637 "pdflatex"
-  "latex/coupler-paper.run.xml" 1777248395.58048 2374 6bf08e69b562e875973d3ad911336af4 "pdflatex"
+  "latex/coupler-paper.aux" 1778458912.49694 14646 9fe873198ed554294698672fca702ad7 "pdflatex"
+  "latex/coupler-paper.bbl" 1778425801.28293 43542 057287825949af2edbc018a40f143535 "biber latex/coupler-paper"
+  "latex/coupler-paper.out" 1778458912.49882 4381 865d7041c141988029e3c46af0ace3c6 "pdflatex"
+  "latex/coupler-paper.run.xml" 1778458912.50048 2374 6bf08e69b562e875973d3ad911336af4 "pdflatex"
   "plots/case1_plot_1.pdf" 1776598911.9556 20885 2d9be2853fea7f13377ea05ac979c19c ""
   "plots/case1_plot_2.pdf" 1776598911.9562 20440 c98b1862ef8faaca40cac82e3a3a502e ""
   "plots/case2_plot_1.pdf" 1776598911.95679 19657 1c838e3e174581318cec1b04126ac920 ""
