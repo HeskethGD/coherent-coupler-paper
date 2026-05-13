@@ -420,17 +420,22 @@ Comparing \eqref{eq:uv-hat-system} with the original system \eqref{eq:uv-system}
 All modes now share a single propagation constant $b_1/N$ and a single self-phase modulation coefficient $2b_2/N$, whilst all cross-phase modulation terms $a_{j,k}$ with $j \ne k$ have been eliminated.
 It should be noted that parameters $b_1, b_2$ depend on $\gamma_j$ and thus, in the new coordinates parameters depend on mode power in the original coordinates and are not exclusively fiber parameters.
 In terms of the solutions to the system, the effect of the $\phi_j^{NL}$ transform is to remove the $z$ dependent log terms weighted by $r_{1,j}$ in \eqref{eq:u-v-quartic}. 
-% This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
+This transformation can be interpreted as an analytic form of back-propagation in that it integrates the accumulated cross-phase modulation from all modes along the propagation path and applies conjugate phase shifts to remove these effects, similar to what is implemented digitally to correct nonlinear distortion in fibre optic communication systems, or physically using phase-conjugating optical fibres as explored in \cite{heskethMinimizingInterchannelCrossphase2016}.
 The solutions are:
 \begin{align}
-\hat{u}_j{\left(z\right)} &= \frac{{\hat{\alpha}}_{j} \sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{z\left( {r}_{0,j} -\left(-1\right)^{j} {\beta}\right)} }{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} - z_{1}\right)}}, \notag \\
-\hat{v}_j{\left(z\right)} &= \frac{\sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - {\mu}_{j}\right)} e^{-z\left( {r}_{0,j} -\left(-1\right)^{j} {\beta} \right)}}{ {\hat{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}},
+\hat{u}_j{\left(z\right)} &= \frac{{\hat{\alpha}}_{j} \sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{-z\left(\zeta\left(\mu_j + z_1 - z_0\right) + b_2\gamma_j\right)} }{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} - z_{1}\right)}}, \notag \\
+\hat{v}_j{\left(z\right)} &= \frac{\sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - {\mu}_{j}\right)} e^{z\left(\zeta\left(\mu_j + z_1 - z_0\right) + b_2\gamma_j\right)}}{ {\hat{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \label{eq:uhat-vhat-gauge-sols}
 \end{align}
-where:
-\begin{equation}
-\beta = \frac{\left(- {r}_{1,1} + {r}_{1,2}\right) \left(- 2 \zeta{\left(z_{1}\right)} + {b}_{2} {\gamma}_{1} + {b}_{2} {\lambda}_{1}\right)}{2} - 2 {a}_{1,2} {\gamma}_{1} - {a}_{2} - \frac{{b}_{1}}{2}
-\end{equation}
-LOOK AT SIMPLIFYING beta r0j using LAM0
+It is to be noted that the poles of modes $\hat{u}_j$ are at $z=z_0+z_1$ modulo the lattice and these are not the same poles as their Hamiltonian conjugates $\hat{v}_j$ which are at $z=z_0-z_1$. 
+In other work, we have often encountered cases where modes and their conjugates share poles at $z=z_0$ and the modal power is the difference of two Weierstrass $\wp$ functions. 
+One may thus ask, what happens if we write these solutions for two modes as the ratio of two such functions, i.e., if we were to write:
+\begin{align}
+  \frac{ \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} }{\sigma{\left(z - z_{0} - z_{1}\right)}} &= \frac{\left(\frac{\sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)}}{\sigma{\left(z - z_{0}\right)}}\right)}{\left(\frac{\sigma{\left(z - z_{0} - z_{1}\right)}}{\sigma{\left(z - z_{0}\right)}}\right)}, \notag \\
+  \frac{ \sigma{\left(z - {\mu}_{j}\right)} }{\sigma{\left(z - z_{0} + z_{1}\right)}} &= \frac{\left(\frac{\sigma{\left(z - {\mu}_{j}\right)}}{\sigma{\left(z - z_{0}\right)}}\right)}{\left(\frac{\sigma{\left(z - z_{0} + z_{1}\right)}}{\sigma{\left(z - z_{0}\right)}}\right)}, \label{eq:two-to-three-ratios-sig}
+\end{align}
+then we see that we are recasting the terms on the left of \eqref{eq:two-to-three-ratios-sig} which represent our two mdoes and their conjugates from \eqref{eq:uhat-vhat-gauge-sols}, as three new modes and their conjugates as represented by each term in parentheses on the right hand side of \eqref{eq:two-to-three-ratios-sig}.
+One may then ask what would the systme be that  is associated with the newly envisioned three modes and we show in the next section that is familiar to us as degenerate four-wave mixing.
+
 \subsection{Projecting from degenerate FWM to the coherent coupler}\label{subsec:deg-fwm}
 In this section we will show how the coherent coupler system in \eqref{eq:uv-system} is essentially equivalent to a degenerate four-wave mixing (FWM) system that one finds in nonlinear fiber optics. 
 To be more precise, we will show that there is a projection from the three mode degenerate FWM system to the two mode coherent coupler system.
@@ -523,18 +528,15 @@ The solutions to \eqref{eq:ubar-vbar-degfwm-system} are for $j=1,2,3$:
 \begin{align}
 \bar{u}_j{\left(z\right)} &= \sqrt{\frac{s\left(j\right)}{2}}\frac{{\bar{\alpha}}_{j}\sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{z \left(\frac{\chi {\bar{\gamma}}_{j}}{s{\left(j \right)}} - \zeta{\left({\mu}_{j} - z_{0}\right)} + \frac{1}{\chi}\right)}}{\sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)  }}, \notag \\
 \bar{v}_j{\left(z\right)} &= \sqrt{\frac{s\left(j\right)}{2}}\frac{\sigma{\left(z - {\mu}_{j}\right)} e^{- z \left(\frac{\chi {\bar{\gamma}}_{j}}{s{\left(j \right)}} - \zeta{\left({\mu}_{j} - z_{0}\right)} + \frac{1}{\chi}\right)}}{{\bar{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)} }, \notag \\
-\bar{u}_j{\left(z\right)} \bar{v}_j{\left(z\right)} &= \frac{s{\left(j \right)}}{2}\left(\wp{\left({\mu}_{j} - z_{0} \right)} - \wp{\left(z - z_{0}\right)}\right)
+\bar{u}_j{\left(z\right)} \bar{v}_j{\left(z\right)} &= \frac{s{\left(j \right)}}{2}\left(\wp{\left({\mu}_{j} - z_{0} \right)} - \wp{\left(z - z_{0}\right)}\right) \label{eq:-ubar-vbar-sols-dfwm}
 \end{align}
 where $\bar{\alpha}_j$ is an integration constant that captures initial relative phase offsets between modes and can be used to equate initial conditions between the degenerate FWM and coherent coupler systems, $s(j)$ is the degeneracy weight such that $s(1)=s(2)=1$ and $s(3)=2$, the new third $\mu_j$ constant is $\mu_3 = z_1 + z_0$, the elliptic functions use invariants $g_2, g_3$, and $\mu_1, \mu_2, z_0, z_1, g_2, g_3$ share the same definitions and values as those given in Section~\ref{sec:mode-power} for the coherent coupler, thereby connecting the two systems. 
-% The solutions in both \eqref{eq:u-v-bar} and \eqref{eq:u-v-tilde} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
-% These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
-% Importantly, whilst the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
-% The solutions are quasi-periodic, and modulo the period lattice they have zeros where the numerator $\sigma$ function vanishes and poles where the denominator $\sigma$ function vanishes.
+The solutions in both \eqref{eq:-ubar-vbar-sols-dfwm} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
+These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
+Importantly, whilst the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
+The solutions are quasi-periodic, and modulo the period lattice they have zeros where the numerator $\sigma$ function vanishes and poles where the denominator $\sigma$ function vanishes.
 
-% The Kronecker theta form establishes a direct connection with other integrable nonlinear optical systems, including two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, suggesting a unified mathematical framework across different parametric processes.
-
-% Owing to the parameter-free form of \eqref{eq:uv-tilde-system}, the simple structure of the Hamiltonian \eqref{eq:H-tilde}, and the elegant Kronecker theta function solutions in \eqref{eq:u-v-tilde}, we refer to $\tilde{u}_j, \tilde{v}_j$ as the canonical coordinates of four-wave mixing.
-% The derivation of this canonical form, together with the demonstration that it can be reached from any physical four-wave mixing system through the sequence of transformations presented in this section, constitutes the second main result of this paper.
+The Kronecker theta form establishes a direct connection with other integrable nonlinear optical systems, including two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, suggesting a unified mathematical framework across different parametric processes.
 
 
 
@@ -549,56 +551,61 @@ This serves two purposes, first, to verify that the solutions correctly satisfy 
 We evaluate the analytic solutions using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022}, which provides Weierstrass elliptic functions as a wrapper around Jacobi elliptic functions from the \emph{mpmath} package \cite{MpmathPythonLibrary2023}. 
 For comparison, we solve the differential equations numerically using the DOP853 Runge-Kutta algorithm from \emph{SciPy} \cite{virtanenSciPy10Fundamental2020}.
 
-Figures \ref{fig:u-v-re} and \ref{fig:u-v-im} show the real and imaginary parts of the modal power $u_jv_j$ using the analytic solution \eqref{eq:uv-wp} compared against numerical integration of the abstract system \eqref{eq:uv-system}.
-The analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
-The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of all four modes.
+For plotting purposes we define the following complex valued functions $A_j(z),\ \phi_j(z) \in \mathbb{C}$ that are analagous to modal power (absolute value squared) and phase; they woudl be equivalent to those corresponding real valued functions if $v_j$ was the complex conjugate of $u_j$ rather than the more general Hamiltonian conjugate that we typically consider in our generalised systems:
+\begin{align}
+A^2_j(z) &= u_j(z)v_j(z), \notag \\
+\phi_j(z) &= \frac{\mathrm{log}\left(\frac{u_j(z)}{v_j(z)}\right)}{2}. \label{eq:A-phi-u-v}
+\end{align}
 
-Figures \ref{fig:A-abs} and \ref{fig:A-phi} show the intensity and phase evolution of the physical field amplitudes $A_j$ in a representative four-wave mixing scenario.
-The values were obtained by using \eqref{eq:u-v-quartic} to calculate $u_j, v_j$, then converting to $A_j, A_j^{*}$ via \eqref{eq:u-v-A}.
-Again, the analytic solutions (lines) match the numerical integration (symbols) throughout the propagation distance.
-The periodic energy exchange between modes visible in Figure \ref{fig:A-abs} is characteristic of phase-matched four-wave mixing, whilst Figure \ref{fig:A-phi} shows the phase evolution dominated by linear propagation with nonlinear contributions visible as regions of high curvature.
+The top row of Figure \ref{fig:case1-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} compared against numerical integration of the original general coherent coupler system in \eqref{eq:uv-system}.
+The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of the two modes. 
+The initial mode and parameter values for this plot were $u_1(0)=0.487-0.828i$, $u_2(0)=-0.971-0.865i$, $v_1(0)=0.942 + 0.279i$, $v_2(0)=0.386-0.523i$, $a_1=-0.161$, $a_2=-0.897$, $a_{1,1}=0.583$, $a_{1,2}=a_{2,1}=-0.0754$, and $a_{2,2}=-0.0525$.
 
+The top row of Figure \ref{fig:case2-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system}.
+Here, $\hat{u}_j, \hat{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
+In comparrison with Figure \ref{fig:case1-plot1}, the modal power $A_j^2$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
+The initial values of $\hat{u}_j, \hat{v}_j$ were set equal to the values of $u_j, v_j$ used in Figure \ref{fig:case1-plot1} and the $a_1$, $a_2$, $a_{1,1}$, $a_{1,2}$, $a_{2,1}$, and $a_{2,2}$ parameters were the same in all figures.
+
+Finally, the top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system}.
+Here, $\bar{u}_j, \bar{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
+The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of the two modes.
+We choose to set $\bar{u}_3(0)=\sigma(z_0 - z_1)/\left(\sigma(z_0)\sigma(z_1)\right)$ and the remaining inital conditions for the other modes in the bar coordinates are then determined using \eqref{eq:projection-hat-as-bars} where the values for $\hat{u}_j(0), \hat{v}_j(0)$ and all other parameters share the same values as thosed used in Figure \ref{fig:case2-plot1}.
+
+In Figures \ref{fig:case1-plot1}, \ref{fig:case2-plot1}, and \ref{fig:case3-plot1} the analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
 These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
-\caption{Real part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:u-v-re}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{plots/case1_plot_2.pdf}
-\caption{Imaginary part of abstract modal power $u_jv_j$: analytic solution \eqref{eq:uv-wp} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:u-v-im}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} (lines) compared against numerical integration of the original general coherent coupler system in \eqref{eq:uv-system} (symbols).}
+\label{fig:case1-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
-\caption{Intensity $|A_j|^2$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:A-abs}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} (lines) compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system} (symbols).}
+\label{fig:case2-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{plots/case2_plot_2.pdf}
-\caption{Phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
-\label{fig:A-phi}
+\includegraphics[width=1.0\textwidth]{plots/case3_plot_1.pdf}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} (lines) compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system} (symbols).}
+\label{fig:case3-plot1}
 \end{figure}
-
 
 \section{Conclusion}
 
-We have presented complete analytic solutions for quasi-continuous-wave four-wave mixing in nonlinear optical fibres without any of the standard simplifying assumptions.
-The solutions, expressed in terms of Weierstrass elliptic functions, provide the full complex field envelopes for all four waves under arbitrary initial conditions, including pump depletion, cross-phase modulation, and phase mismatch effects.
+We have presented complete analytic solutions for the generalised coherent coupler in nonlinear optics without any of the standard simplifying assumptions.
+The solutions, expressed in terms of Weierstrass elliptic functions, provide the full complex field envelopes for all modes under arbitrary initial conditions, including cross-phase modulation and phase mismatch effects.
 These solutions complement previous work in the literature by providing a unified treatment of the complex envelopes themselves rather than treating amplitudes and phases separately.
 
-Guided by the structure of these solutions, we developed a sequence of coordinate transformations that reveal a canonical form of the four-wave mixing equations.
-In these canonical coordinates, the system becomes parameter-free with a universal structure applying to all four-wave mixing processes regardless of specific fibre properties or operating conditions.
-The solutions in canonical coordinates are single-valued meromorphic Kronecker theta functions, connecting four-wave mixing to a broader class of integrable nonlinear optical systems.
-Remarkably, the transformations preserve the essential structure of the differential equations despite depending explicitly on the propagation variable, demonstrating a profound invariance property of four-wave mixing dynamics.
+Guided by the structure of these solutions, we explore coordinate transformations that revealed a projection from degenerate FWM to the generalised coherent coupler. 
+The solutions in the dgenerate FWM system are single-valued meromorphic Kronecker theta functions, connecting this work to a broader class of integrable nonlinear optical systems.
 
 The connection between the Hamiltonian formulation and the Frobenius-Stickelberger determinant, established in Appendix~\ref{app:fs-det-ham-proof}, provides deeper insight into why these conservation laws hold and links four-wave mixing to classical elliptic function theory.
 This mathematical framework may prove valuable for analysing related parametric processes and could extend to higher-order mixing or multimode interactions.
@@ -743,59 +750,7 @@ and observe that it takes the equivalent form to \eqref{eq:fs-det-m} up to const
 
 This completes the demonstration that the Hamiltonian conservation law \eqref{eq:fs-det-start} is equivalent to the Frobenius-Stickelberger determinant formula.
 This connection reveals that the conserved Hamiltonian of the coherent coupler is not merely a convenient construct but rather a manifestation of deep structural properties of elliptic functions.
-The FS determinant framework may provide tools for generalizing these results to higher-order wave mixing processes or systems with additional degrees of freedom.
 
-% ---------- APPENDIX ------------
-% --------------------------------
-
-\section{Parameter definitions in the bar coordinates}
-\label{app:bar-coords-params}
-
-This appendix provides explicit formulae for the parameters that appear in the bar coordinate system introduced in Section~\ref{subsec:bar-coords}, including the key transformation parameters $d_5$, $\varsigma$, $\chi$, and the rescaled constants $\bar{\gamma}_j$, $\theta_j$, and $\bar{\kappa}_j$.
-
-\begin{align}
-{d}_{5} &= {d}_{1} + 2 {d}_{2} {\lambda}_{1} + 3 {d}_{3} {\lambda}_{1}^{2} + 4 {d}_{4} {\lambda}_{1}^{3}, \notag  \\
-\varsigma & = \frac{1}{2} \left(b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2\right) \left(\sqrt{\prod\limits_{j=1}^4 \gamma_j - \lambda_1}\right)^{-1}  = \pm 1, \\
-\chi &= \frac{8\left(b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2\right)}{d_5} = \frac{16\, \varsigma}{d_5}\sqrt{\prod\limits_{j=1}^4 \gamma_j - \lambda_1}, \notag \\
-\bar{\gamma}_{j} &= \frac{{d}_{5}}{4 \left({\gamma}_{j} - {\lambda}_{1}\right)} + \frac{{b}_{1} + 2 {b}_{2} {\lambda}_{1}}{\chi} - \frac{4}{\chi^{2}}, \notag \\
-{\theta}_{j} &= \frac{b_0 + b_1 {\lambda}_{1} + b_2{\lambda}_{1}^2}{2\left({\gamma}_{j} - {\lambda}_{1}\right)} + \frac{{b}_{1}}{4} + \frac{{b}_{2} {\gamma}_{j}}{2} + \frac{{b}_{2} {\lambda}_{1}}{2} - \frac{1}{\chi}, \quad \sum\limits_{j=1}^{4} \theta_j = 0, \notag \\
-\bar{\kappa}_j &= 2 {\theta}_{j} + \frac{1}{\chi} - {b}_{2} {\gamma}_{j} - \zeta{\left({\mu}_{j} - z_{0}, g_2, g_3\right)}.
-\end{align}
-
-% ---------- APPENDIX ------------
-% --------------------------------
-
-\section{Scaled parameters in the tilde coordinates}
-\label{app:scaled-params}
-When the system in subsection \ref{subsec:tilde-coords} (tilde notation) is considered a transform of that in subsection \ref{subsec:bar-coords} (bar notation), then parameters are related via the following scaling laws:
-\begin{align}
-\tilde{H} &= \chi^3\bar{H}, \\
-\tilde{\epsilon}_j &= \epsilon_j \sqrt[4]{\varsigma}, \notag \\
-\tilde{\gamma}_j &= \chi^2\bar{\gamma}_j, \notag \\
-\tilde{g}_2 &= \chi^4 g_2, \notag \\
-\tilde{g}_3 &= \chi^6 g_3, \notag \\
-\xi_0 &= \frac{z_0}{\chi}, \notag \\
-\tilde{\mu}_j &= \frac{\mu_j}{\chi}.
-\end{align}
-
-If the system in subsection \ref{subsec:tilde-coords} is considered as a standalone system irrespective of any transformation,
-then the paramters can be given exclusively in the coordinate system denoted by tilde notation as follows.
-Firstly, $\tilde{H}$ can be obtained from substituting $\tilde{u}_j{\left(0\right)}, \tilde{v}_j{\left(0 \right)}$ into \eqref{eq:H-tilde}
-and $\tilde{\epsilon}_j$ can be considered an integration constant fixed by initial conditions to capture any phase offset between $\tilde{u}_j, \tilde{v}_j$. 
-We may further use relations:
-\begin{align}
-\tilde{\gamma}_{j} =& \tilde{u}_j{\left(0\right)} \tilde{v}_j{\left(0 \right)} - \frac{1}{4}\sum_{j=1}^{4} \tilde{u}_j{\left(0\right)} \tilde{v}_j{\left(0\right)}, \notag \\
-\tilde{g}_{2} =& \frac{\tilde{H}^{2}}{12} + \tilde{H} \left(\frac{{\tilde{e}}_{2}}{12} + \frac{16}{3}\right) + \frac{{\tilde{e}}_{2}^{2}}{48} + \frac{2 {\tilde{e}}_{2}}{3} - \frac{{\tilde{e}}_{3}}{4} + \frac{64}{3}, \notag \\
-\tilde{g}_{3} =& \frac{\tilde{H}^{3}}{216} + \tilde{H}^{2} \left(\frac{{\tilde{e}}_{2}}{144} - \frac{5}{9}\right) + \tilde{H} \left(\frac{{\tilde{e}}_{2}^{2}}{288} - \frac{2 {\tilde{e}}_{2}}{9} - \frac{{\tilde{e}}_{3}}{48} - \frac{64}{9}\right) \notag \\
-&+ \frac{{\tilde{e}}_{2}^{3}}{1728} - \frac{5 {\tilde{e}}_{2}^{2}}{144} - \frac{{\tilde{e}}_{2} {\tilde{e}}_{3}}{96} - \frac{8 {\tilde{e}}_{2}}{9} + \frac{{\tilde{e}}_{3}}{3} + \frac{{\tilde{e}}_{4}}{4} - \frac{512}{27}
-\end{align}
-where $\tilde{e}_j=\tilde{e}_j\left(\tilde{\gamma}_1, \tilde{\gamma}_2, \tilde{\gamma}_3, \tilde{\gamma}_4\right)$ is the $j^{th}$ order \emph{elementary symmetric polynomial} formed with the four $\tilde{\gamma}_j$. The points $\xi_0, \tilde{\mu}_j$ are found by inverting:
-\begin{align}
-\wp{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} - \frac{\sum_{j=1}^{4} \tilde{u}{\left(0,{\mu}_{j} \right)} \tilde{v}{\left(0,{\mu}_{j} \right)}}{4} + \frac{4}{3}, \notag \\
-\wp'{\left(\xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \frac{1}{4}\left(\prod_{j=1}^{4}{\tilde{u}_j(0)} - \prod_{j=1}^{4}{\tilde{v}_j(0)}\right), \notag \\
-\wp{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= - \frac{\tilde{H}}{12} - \frac{{\tilde{e}}_{2}}{24} + {\tilde{\gamma}}_{j} + \frac{4}{3}, \notag \\
-\wp'{\left({\tilde{\mu}}_{j} - \xi_{0},\tilde{g}_{2},\tilde{g}_{3} \right)} &= \tilde{H} + \frac{{\tilde{e}}_{2}}{4} - \frac{{\tilde{\gamma}}_{j}^{2}}{2} - 4 {\tilde{\gamma}}_{j}.
-\end{align}
 
 \printbibliography
 
