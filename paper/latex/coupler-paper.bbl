@@ -237,8 +237,8 @@
       \strng{authornamehash}{ff4159d339a8205fcaf83c1c04fc4275}
       \strng{authorfullhash}{ff4159d339a8205fcaf83c1c04fc4275}
       \strng{authorfullhashraw}{ff4159d339a8205fcaf83c1c04fc4275}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-4419-3087-3 978-1-4757-2063-1}
@@ -506,8 +506,8 @@
       \strng{authornamehash}{3f501810ff9c0a4833114b7395db82e3}
       \strng{authorfullhash}{3f501810ff9c0a4833114b7395db82e3}
       \strng{authorfullhashraw}{3f501810ff9c0a4833114b7395db82e3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pyweierstrass}
