@@ -207,8 +207,8 @@
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Complete analytic solutions to quasi-continuous-wave four-wave mixing in nonlinear optical fibres are presented in terms of Weierstrass elliptic \$\textbackslash wp\$, \$\textbackslash zeta\$, and \$\textbackslash sigma\$ functions, providing the full complex envelopes for all four waves under arbitrary initial conditions. A sequence of coordinate transformations reveals a canonical form with universal parameter-free structure. Remarkably, these transformations depend explicitly on the propagation variable yet preserve the structural form of the differential equations, an invariance property not previously reported for four-wave mixing. In the canonical coordinates, solutions become single-valued meromorphic Kronecker theta functions, establishing connections with other integrable nonlinear optical systems. The Hamiltonian conservation is shown to arise from the Frobenius-Stickelberger determinant. Numerical validation confirms the solutions using open-source Python libraries.}
@@ -251,8 +251,8 @@
       \strng{authornamehash}{910d801de7c7b036bee279a678fc8362}
       \strng{authorfullhash}{910d801de7c7b036bee279a678fc8362}
       \strng{authorfullhashraw}{910d801de7c7b036bee279a678fc8362}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Nonlinear Fiber Optics, Sixth Edition, provides an up-to-date accounting of the nonlinear phenomena occurring inside optical fibers in telecommunicati}
@@ -417,8 +417,8 @@
       \strng{authornamehash}{4f449399a7aac2192e706c0d728a8544}
       \strng{authorfullhash}{4f449399a7aac2192e706c0d728a8544}
       \strng{authorfullhashraw}{4f449399a7aac2192e706c0d728a8544}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Using analytic and numerical modelling of fibre transmission systems that employ optical phase conjugation (OPC), we show inter-channel cross-phase modulation depends on the integrated square error between nonlinear profiles before and after OPC and that arranging amplifiers and tuning power levels is crucial to minimizing noise. We derive modulation transparent formulas for phase noise and optimal power settings. Examples are shown for 16 and 64 quadrature amplitude modulation.}
@@ -845,8 +845,8 @@
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Code and latex for coherent coupler (2 mode) paper - General · HeskethGD/coherent-coupler-paper}
@@ -1015,8 +1015,8 @@
       \strng{authornamehash}{3b98d798f6abce49b004b950c7399ba8}
       \strng{authorfullhash}{84c6fbc34416f121bcaaf3c9fdbd6d96}
       \strng{authorfullhashraw}{84c6fbc34416f121bcaaf3c9fdbd6d96}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{SymPy is an open source computer algebra system written in pure Python. It is built with a focus on extensibility and ease of use, through both interactive and programmatic applications. These characteristics have led SymPy to become a popular symbolic library for the scientific Python ecosystem. This paper presents the architecture of SymPy, a description of its features, and a discussion of select submodules. The supplementary material provide additional examples and further outline details of the architecture and features of SymPy.}

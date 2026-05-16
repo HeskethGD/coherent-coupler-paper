@@ -76,7 +76,7 @@ The generalisation to asymmetric couplers introduces additional parameters that 
 
 The present work derives complete solutions for the complex envelopes of the general asymmetric coupler using Weierstrass elliptic functions. 
 This work is part of a series of papers by the author that provide complete general solutions to coupled mode systems of nonlinear ordinary differential equations in quasi-continuous-wave nonlinear optics that include 
-linearly polarised (LP) modes of a multimode optical fiber \cite{heskethNonlinearEffectsMultimode2014}, two-wave and three-wave mixing in quadratic nonlinear media \cite{heskethGeneralComplexEnvelope2015}, polarisation dynamics in nonlinear fibres \cite{heskethGeneralComplexEnvelope2015}, parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, 
+linearly polarised (LP) modes of a multimode optical fiber \cite{heskethNonlinearEffectsMultimode2014}; two-wave and three-wave mixing in quadratic nonlinear media, polarisation dynamics in nonlinear fibres, and parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}; 
 and four-wave mixing in an optical fiber \cite{heskethCompleteWeierstrassElliptic2026}.
 The Weierstrass formulation provides a natural solution pathway in such systems: the coupled equations are recast as logarithmic derivatives, which directly yield Weierstrass $\zeta$ functions, and integration produces solutions expressed as ratios of Weierstrass $\sigma$ functions. 
 This progression through the Weierstrass hierarchy, from $\wp$ to $\zeta$ to $\sigma$, follows naturally from the structure of the complex envelope equations. 
@@ -251,7 +251,7 @@ To solve it, we now transform \eqref{eq:drho-sqrd-4} from quartic to the standar
 \end{array}
 \end{equation}
 
-For definiteness, we choose the root $\lambda_1$. 
+For definiteness and without loss of generality, we choose the root $\lambda_1$. 
 The procedure sketched in \eqref{eq:wp-4-to-3} is then implemented in the following single transformation:
 \begin{align}
 \rho{\left(z \right)} &= {\lambda}_{1} + \frac{d_4}{- 4 w{\left(z \right)} \prod_{l=1}^{3} {\Delta}_{l}  + \frac{d_4}{3} \sum_{l=1}^{3} {\Delta}_{l} }, \label{eq:rho-wp-1} \\
@@ -352,9 +352,9 @@ This provides a deeper structural understanding of how the Hamiltonian is conser
 
 \subsection{Jensen's special case}
 
-In Jensen's case, there is notable simplification in the solutions as the wave guides are made identical.
+In Jensen's case, there is notable simplification in the solutions as the waveguides are made identical.
 In our notation, this translates into additional symmetries among $a_j$ and $a_{j,k}$ parameters as specified by their relation to Jensen's parameters in \eqref{eq:uv-to-jensen}.
-These symmetries further translate into $b_1=0$, $2\Lambda_{1,j}=b_2$, and importantly $r_{1,j} = \frac{1}{2}$, which in \eqref{eq:u-v-quartic-no-wp-sqrt} can be seen to elliminate the logarithmic term in the exponentials, thereby removing the branching behaviour, reducing the solutions to a ratio of sigma functions, and thus, meromorphic functions.
+These symmetries further translate into $b_1=0$, $2\Lambda_{1,j}=b_2$, and importantly $r_{1,j} = \frac{1}{2}$, which in \eqref{eq:u-v-quartic-no-wp-sqrt} can be seen to eliminate the logarithmic term in the exponentials, thereby removing the branching behaviour, reducing the solutions to a ratio of sigma functions, and thus, meromorphic functions.
 We show in the next section that the branching behaviour can also be removed in the general case via gauge transform.
 
 % ---------- SECTION -------------
@@ -362,7 +362,7 @@ We show in the next section that the branching behaviour can also be removed in 
 
 \section{The relationship between the coherent coupler and degenerate FWM} \label{sec:coord-transforms}
 
-In this section we present the second main result of this paper: a transformation from the coherent coupler to a canonical form in which solutions are merormorphic and a projection from degenerate FWM onto that form.
+In this section we present the second main result of this paper: a transformation from the coherent coupler to a canonical form in which solutions are meromorphic and a projection from degenerate FWM onto that form.
 The structure of the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} naturally suggests this transformation.
 We proceed in two steps: first we remove cross-phase modulation by a gauge transformation, and then we identify the resulting two-mode system as a projection of a degenerate FWM system.
 
@@ -563,7 +563,7 @@ We set $\bar{u}_3(0)=\sigma(z_0 - z_1)/\left(\sigma(z_0)\sigma(z_1)\right)$, and
 Finally, the top row of Figure \ref{fig:case4-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the mode power $A_j^2$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen}, compared against numerical integration of Jensen's original system in \eqref{eq:jensen}.
 Here, $E_j, E^{*}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v} and thus in this case those variables reduce to absolute magnitude squared and the genuine phase, i.e., both become real variables as confirmed by no imaginary parts observed in Figure \ref{fig:case4-plot1} \textbf{B} and \textbf{D}.
-The initial mode and parameter values for this plot were $E_1(0)=0.731-0.513j$, $E_2(0)=0.551+0.967i$, $\Omega_1=0.462$, $\Omega_2=-0.00783$, $\Omega_3=-0.541$, and $\Omega_4=0.252$.
+The initial mode and parameter values for this plot were $E_1(0)=0.731-0.513i$, $E_2(0)=0.551+0.967i$, $\Omega_1=0.462$, $\Omega_2=-0.00783$, $\Omega_3=-0.541$, and $\Omega_4=0.252$.
 
 In Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1} the analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
 For the parameter sets shown in Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1}, the maximum pointwise absolute discrepancy between the analytic solution vectors and the DOP853 numerical solutions, over the plotted interval and sampled points, was approximately $10^{-11}$, $10^{-13}$, $10^{-13}$, and $10^{-15}$, respectively.
@@ -640,8 +640,6 @@ N &= 2,\\
 {b}_{1} &= - \sum_{j=1}^{N} {a}_{j} - \frac{1}{2}\sum\limits_{j,k=1}^{N} \left({\gamma}_{j} + {\gamma}_{k}\right) {a}_{j,k}, \notag \\
 {b}_{2} &= \frac{1}{N}\sum\limits_{j,k=1}^{N} {a}_{j,k}, \notag \\
 {c}_{0} &= \prod_{j=1}^{N} {\gamma}_{j}, \notag \\
-{c}_{1} &= 0, \notag \\
-{c}_{2} &= 1, \notag \\
 {d}_{0} &= {b}_{0}^{2} - 4 {c}_{0}, \notag \\
 {d}_{1} &= 2 {b}_{0} {b}_{1}, \notag \\
 {d}_{2} &= 2 {b}_{0} {b}_{2} + {b}_{1}^{2} - 4, \notag \\
