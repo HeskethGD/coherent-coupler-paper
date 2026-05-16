@@ -103,13 +103,13 @@ This interaction is modelled by the linear coupling terms parameterised by $\Ome
 Each wave also experiences self-phase modulation (SPM), where its own intensity induces a phase shift on itself, and cross-phase modulation (XPM), where the intensity of the other wave induces an additional phase shift:
 
 \begin{align}
-\frac{dA_1}{dZ} &= i \left(|A_1|^2 {\Omega}_{3} + 2 |A_2|^2 {\Omega}_{4}\right) A_1 + i {\Omega}_{1} A_1  + i {\Omega}_{2} A_2, \notag \\
-\frac{dA_2}{dZ} &= i \left(2 |A_1|^2 {\Omega}_{4} + |A_2|^2 {\Omega}_{3}\right) A_2 + i {\Omega}_{2} A_1  + i {\Omega}_{1} A_2, \label{eq:jensen}
+\frac{dE_1}{dZ} &= i \left(|E_1|^2 {\Omega}_{3} + 2 |E_2|^2 {\Omega}_{4}\right) E_1 + i {\Omega}_{1} E_1  + i {\Omega}_{2} E_2, \notag \\
+\frac{dE_2}{dZ} &= i \left(2 |E_1|^2 {\Omega}_{4} + |E_2|^2 {\Omega}_{3}\right) E_2 + i {\Omega}_{2} E_1  + i {\Omega}_{1} E_2, \label{eq:jensen}
 \end{align}
 
 where:
 \begin{itemize}
-    \item $A_j$ with $j=1,2$ are the slowly-varying complex field amplitudes
+    \item $E_j$ with $j=1,2$ are the slowly-varying complex field amplitudes
     \item $Z$ is the propagation distance
     \item $\Omega_1$ is the common propagation constant
     \item $\Omega_2$ is the linear coupling coefficient
@@ -141,12 +141,12 @@ Jensen's system in \eqref{eq:jensen} is recovered from \eqref{eq:uv-system} by i
 a_1 &= - a_2 = - \frac{i {\Omega}_{1}}{{\Omega}_{2}}, \notag \\
 a_{1,1} &= a_{2,2} = \frac{i {\Omega}_{3}}{{\Omega}_{2}}, \notag \\
 a_{1,2} &= a_{2,1} = - \frac{2 i {\Omega}_{4}}{{\Omega}_{2}}, \notag \\
-u_1(z) &= A_1{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
-u_2(z) &= A^{*}_2{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
-v_1(z) &= -A^{*}_1{\left(Z\right)} e^{\frac{i \pi}{4}}, \notag \\
-v_2(z) &= A_2{\left(Z\right)} e^{\frac{i \pi}{4}}, \label{eq:uv-to-jensen}
+u_1(z) &= E_1{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
+u_2(z) &= E^{*}_2{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
+v_1(z) &= -E^{*}_1{\left(Z\right)} e^{\frac{i \pi}{4}}, \notag \\
+v_2(z) &= E_2{\left(Z\right)} e^{\frac{i \pi}{4}}, \label{eq:uv-to-jensen}
 \end{align}
-where $A^*$ denotes the complex conjugate and $z=\Omega_2 Z$ is the rescaled coordinate used in \eqref{eq:uv-system}.
+where $E^*$ denotes the complex conjugate and $z=\Omega_2 Z$ is the rescaled coordinate used in \eqref{eq:uv-system}.
 Therefore, Jensen's system in \eqref{eq:jensen} is a special case of the more general system in \eqref{eq:uv-system}.
 
 In the following sections we provide the complete analytic solution for the generalised system in \eqref{eq:uv-system}.
@@ -322,14 +322,20 @@ Equations \eqref{eq:dlog-u-v-zeta} can be integrated by noting that the Weierstr
 Performing the integration and taking exponentials gives the first main result of this paper, the complete analytic solutions for the complex mode envelopes $u_j, v_j$ without decomposition into amplitude and phase:
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \notag \\[12pt]
-v_j{\left(z\right)} &= \frac{\sqrt{W_j} \, \sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}} \label{eq:u-v-quartic}
+v_j{\left(z\right)} &= \frac{\sqrt{W_j} \,\sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j} \right)}{\alpha_j\,\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)}} \label{eq:u-v-quartic}
+\end{align}
+or equivalently:
+\begin{align}
+u_j{\left(z\right)} &= \frac{\kappa\, \alpha_j\,\sqrt{W_j} \,\sigma{\left(z_1\right)}\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} \left({r}_{1,j} - \frac{1}{2}\right)\right)}{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}  - z_1\right)}}, \notag \\[12pt]
+v_j{\left(z\right)} &= \frac{\sqrt{W_j} \,  \sigma{\left(z_1\right)}\sigma{\left(z - {\mu}_{j} \right)} \exp\left(- z {r}_{0,j} - \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)}  \left({r}_{1,j} - \frac{1}{2}\right) \right)}{\kappa \,\alpha_j \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} + z_1\right)}} \label{eq:u-v-quartic-no-wp-sqrt}
 \end{align}
 where the branch of the logarithm is chosen continuously along the integration path from $z=0$, $\alpha_j$ is the integration constant that can be fixed by initial conditions to capture any phase offset between a mode and its Hamiltonian conjugate, and square-root branches are chosen consistently with the same initial conditions.
 The other constants are:
 \begin{align}
-W_j &= \frac{\wp'{\left(z_{1} \right)}}{b_2\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \\[6pt]
-r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{b_2} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \\[6pt]
-r_{1,j} &= \frac{{\Lambda}_{1,j}}{b_2},
+W_j &= \frac{\wp'{\left(z_{1} \right)}}{b_2\,\left(\wp{\left(z_{1} \right)} - \wp{\left({\mu}_{j} - z_{0}\right)}\right)}, \notag \\[6pt]
+r_{0,j} &= {\Lambda}_{0,j} + {\Lambda}_{1,j} {\lambda}_{1} - \frac{2 \zeta{\left(z_{1} \right)} {\Lambda}_{1,j}}{b_2} - \frac{\zeta{\left({\mu}_{j} - z_{0} - z_{1}\right)}}{2} - \frac{\zeta{\left({\mu}_{j} - z_{0} + z_{1}\right)}}{2}, \notag \\[6pt]
+r_{1,j} &= \frac{{\Lambda}_{1,j}}{b_2}, \notag \\[6pt]
+\kappa &= \frac{\sqrt{\wp{\left(z_{1}\right)} - \wp{\left(z_{0}\right)}} \sigma{\left(z_{0}\right)} \sigma{\left(z_{1}\right)}}{\sqrt{\frac{\sigma{\left(z_{0} - z_{1}\right)}}{\sigma{\left(z_{0} + z_{1}\right)}}} \sigma{\left(z_{0} + z_{1}\right)}} = \pm 1
 \end{align}
 and it can be shown that:
 \begin{equation}
@@ -340,14 +346,20 @@ These formulae give the generic non-degenerate solutions without approximation.
 We show in Appendix~\ref{app:fs-det-ham-proof} that the Hamiltonian \eqref{eq:ham-uv} can be expressed as the Frobenius--Stickelberger determinant, a classical identity relating products of Weierstrass $\sigma$ functions to determinants of derivatives of $\wp$.
 This provides a deeper structural understanding of how the Hamiltonian is conserved and connects the coherent coupler system to the broader theory of elliptic functions.
 
+\subsection{Jensen's special case}
+
+In Jensen's case, there is notable simplification in the solutions as the wave guides are made identical.
+In our notation, this translates into additional symmetries among $a_j$ and $a_{j,k}$ parameters as specified by their relation to Jensen's parameters in \eqref{eq:uv-to-jensen}.
+These symmetries further translate into $b_1=0$, $2\Lambda_{1,j}=b_2$, and importantly $r_{1,j} = \frac{1}{2}$, which in \eqref{eq:u-v-quartic-no-wp-sqrt} can be seen to elliminate the logarithmic term in the exponentials, thereby removing the branching behaviour, reducing the solutions to a ratio of sigma functions, and thus, meromorphic functions.
+We show in the next section that the branching behaviour can also be removed in the general case via gauge transform.
 
 % ---------- SECTION -------------
 % --------------------------------
 
 \section{The relationship between the coherent coupler and degenerate FWM} \label{sec:coord-transforms}
 
-In this section we present the second main result of this paper: a transformation from the coherent coupler to a canonical form and a projection from degenerate FWM onto that form.
-The structure of the analytic solutions in \eqref{eq:u-v-quartic} naturally suggests this transformation.
+In this section we present the second main result of this paper: a transformation from the coherent coupler to a canonical form in which solutions are merormorphic and a projection from degenerate FWM onto that form.
+The structure of the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} naturally suggests this transformation.
 We proceed in two steps: first we remove cross-phase modulation by a gauge transformation, and then we identify the resulting two-mode system as a projection of a degenerate FWM system.
 
 \subsection{Removing cross-phase modulation with a gauge transform}
@@ -405,35 +417,39 @@ The associated three-mode system is the degenerate FWM system described next.
 \subsection{Projecting from degenerate FWM to the coherent coupler}\label{subsec:deg-fwm}
 We now show how the coherent coupler system in \eqref{eq:uv-system} arises as a projection of a degenerate four-wave mixing (FWM) system from nonlinear fibre optics.
 
-To start, let us recall that in \cite{heskethCompleteWeierstrassElliptic2026} we showed how quasi-continuous-wave FWM systems can be transformed into the following parameterless non-degenerate canonical Hamiltonian system of four modes $\tilde{u}_j(z), j=1,2,3,4$, and their Hamiltonian conjugates $\tilde{v}_j(z)$ (note the tilde notation):
+To start, let us recall that in \cite{heskethCompleteWeierstrassElliptic2026} we showed how quasi-continuous-wave FWM systems can be transformed into the following parameterless non-degenerate canonical Hamiltonian system of four modes $\tilde{u}_j(\xi), j=1,2,3,4$ with $\xi$ a propagation length variable, and their Hamiltonian conjugates $\tilde{v}_j(\xi)$ (note the tilde notation):
 \begin{align}
 \tilde{H} &= \sum_{l=1}^{4} \left(\frac{1}{8} \tilde{u}^{2}_l \tilde{v}^{2}_l  - \tilde{u}_l \tilde{v}_l \right) - \frac{1}{4}\left(\prod_{l=1}^{4} \tilde{u}_l + \prod_{l=1}^{4} \tilde{v}_l\right), \label{eq:H-deg-tilde}
 \end{align}
 \begin{align}
-\frac{\partial}{\partial z} \tilde{u}_j &= \frac{\partial}{\partial \tilde{v}_j} \tilde{H} = -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k, \notag \\
-\frac{\partial}{\partial z} \tilde{v}_j &= -\frac{\partial}{\partial \tilde{u}_j} \tilde{H} = \left( 1 - \frac{\tilde{u}_j \tilde{v}_j}{4}\right) \tilde{v}_j + \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k, \label{eq:uv-tilde-deg-system}
+\frac{\partial}{\partial \xi} \tilde{u}_j &= \frac{\partial}{\partial \tilde{v}_j} \tilde{H} = -\left(1 - \frac{\tilde{u}_j \tilde{v}_j}{4} \right) \tilde{u}_j - \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{v}_k, \notag \\
+\frac{\partial}{\partial \xi} \tilde{v}_j &= -\frac{\partial}{\partial \tilde{u}_j} \tilde{H} = \left( 1 - \frac{\tilde{u}_j \tilde{v}_j}{4}\right) \tilde{v}_j + \frac{1}{4}\prod\limits_{k=1, k \ne j}^{4} \tilde{u}_k, \label{eq:uv-tilde-deg-system}
 \end{align}
 which conserves the Hamiltonian $\tilde{H}$ and, for constants  $\tilde{\gamma}_j$, three intermodal power differences (read as $j > k$ to avoid over counting):
 \begin{equation}
 \label{eq:deg-fwm-power-conserved}
-\tilde{u}_j(z) \tilde{v}_j(z) - \tilde{u}_k(z) \tilde{v}_k(z) = \tilde{\gamma}_j - \tilde{\gamma}_k.
+\tilde{u}_j(\xi) \tilde{v}_j(\xi) - \tilde{u}_k(\xi) \tilde{v}_k(\xi) = \tilde{\gamma}_j - \tilde{\gamma}_k.
 \end{equation}
 
 We now consider a degeneration and rescaling of this FWM system defined by the following substitutions in the Hamiltonian in \eqref{eq:H-deg-tilde} (note the bar notation on the right and the tilde notation on the left):
 \begin{align}
-  \tilde{u}_1(z) &= \varsigma \sqrt{2}\chi \,\bar{u}_1(z), \notag \\
-  \tilde{u}_2(z) &= \sqrt{2} \chi  \,\bar{u}_2(z), \notag \\
-  \tilde{u}_3(z) &= \chi  \,\bar{u}_3(z), \notag \\
-  \tilde{u}_4(z) &= \chi  \,\bar{u}_3(z), \notag \\
-  \tilde{v}_1(z) &= \varsigma \sqrt{2} \chi  \,\bar{v}_1(z), \notag \\
-  \tilde{v}_2(z) &= \sqrt{2} \chi  \,\bar{v}_2(z), \notag \\
-  \tilde{v}_3(z) &= \chi  \,\bar{v}_3(z), \notag \\
-  \tilde{v}_4(z) &= \chi  \,\bar{v}_3(z), \notag \\
+  \chi\xi &= z, \notag \\
+  \tilde{u}_1(\xi) &= \varsigma \sqrt{2}\chi \,\bar{u}_1(z), \notag \\
+  \tilde{u}_2(\xi) &= \sqrt{2} \chi  \,\bar{u}_2(z), \notag \\
+  \tilde{u}_3(\xi) &= \chi  \,\bar{u}_3(z), \notag \\
+  \tilde{u}_4(\xi) &= \chi  \,\bar{u}_3(z), \notag \\
+  \tilde{v}_1(\xi) &= \varsigma \sqrt{2} \chi  \,\bar{v}_1(z), \notag \\
+  \tilde{v}_2(\xi) &= \sqrt{2} \chi  \,\bar{v}_2(z), \notag \\
+  \tilde{v}_3(\xi) &= \chi  \,\bar{v}_3(z), \notag \\
+  \tilde{v}_4(\xi) &= \chi  \,\bar{v}_3(z), \notag \\
 \end{align}
 where $\varsigma = \pm 1$, $\chi$ is a free parameter, and $\tilde{u}_3$ and $\tilde{u}_4$ coalesce to $\bar{u}_3$ (likewise for the corresponding conjugates) to create degeneracy and reduce four degrees of freedom (modes) to three.
-We then divide the Hamiltonian by $2 \chi^3$, which is equivalent to a change of the length variable such that $z \rightarrow 2 \chi^3 z$ (check this), to obtain the degenerate FWM system that we will start from:
+We then divide the Hamiltonian by $2 \chi^3$.
+The division by $2\chi^3$ has two parts. The factor $2\chi^2$ comes from the rescaling of the dependent variables as differentiating the substituted Hamiltonian with respect to $\bar u_j$ or $\bar v_j$ brings down the same factor that appears in the product of the corresponding $\tilde u_j,\tilde v_j$ scalings. 
+Dividing by this factor restores the canonical Hamilton equations for the barred variables. The remaining factor $\chi$ comes from the change of propagation variable $z=\chi\xi$.
+We thus obtain the following degenerate FWM system that we consider for our projection:
 \begin{align}
-\bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 - \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, \label{eq:Hbar-deg-fem}
+\bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 + \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, \label{eq:Hbar-deg-fem}
 \end{align}
 \begin{align}
   \frac{\partial}{\partial z} \bar{u}_j(z) &=  \frac{\partial}{\partial \bar{v}_j} \bar{H}, \notag \\
@@ -445,9 +461,9 @@ We then divide the Hamiltonian by $2 \chi^3$, which is equivalent to a change of
   \frac{\partial}{\partial z} \bar{u}_3(z) &=  - \frac{\bar{u}_3}{\chi} + \frac{\chi \bar{u}_3^{2} \bar{v}_3}{4} - \frac{\varsigma \chi \bar{v}_1 \bar{v}_2 \bar{v}_3}{2}, \notag \\
   \frac{\partial}{\partial z} \bar{v}_1(z) &= \frac{\bar{v}_1}{\chi} - \frac{\chi \bar{v}_1^{2} \bar{u}_1}{2} + \frac{\varsigma \chi \bar{u}_2 \bar{u}_3^{2}}{4}, \notag \\
   \frac{\partial}{\partial z} \bar{v}_2(z) &= \frac{\bar{v}_2}{\chi} - \frac{\chi \bar{v}_2^{2} \bar{u}_2}{2} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_3^{2}}{4}, \notag \\
-  \frac{\partial}{\partial z} \bar{v}_3(z) &= \frac{\bar{v}_3}{\chi} - \frac{\chi \bar{v}_3^{2} \bar{u}_3}{4} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_2 \bar{v}_3}{2}, \label{eq:ubar-vbar-degfwm-system}
+  \frac{\partial}{\partial z} \bar{v}_3(z) &= \frac{\bar{v}_3}{\chi} - \frac{\chi \bar{v}_3^{2} \bar{u}_3}{4} + \frac{\varsigma \chi \bar{u}_1 \bar{u}_2 \bar{u}_3}{2}, \label{eq:ubar-vbar-degfwm-system}
 \end{align}
-There is a projection from \eqref{eq:ubar-vbar-degfwm-system} to \eqref{eq:uv-system}.
+There is a projection from \eqref{eq:ubar-vbar-degfwm-system} to \eqref{eq:uv-system} which we will now describe.
 
 Let us define modes $\hat{u}_j$, $\hat{v}_j$ with $j=1,2$ (note the hat notation), in terms of $\bar{u}_k$, $\bar{v}_k$ modes with $k=1,2,3$, as follows:
 \begin{align}
@@ -476,10 +492,11 @@ where, by definition:
 \begin{equation}
 \sum_{j=1}^{3} {\bar{\gamma}}_{j} = \sum_{j=1}^{2} {\gamma}_{j} = 0.
 \end{equation}
-We then fix the free parameter $\chi$ in the degenerate FWM system in terms of parameters from the coherent coupler system such that:
-\begin{equation}
-  \chi = \frac{8 \left( {b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2} \right)}{{d}_{5}}
-\end{equation}
+We then fix the free parameter $\chi$ and the sign parameter $\varsigma=\pm1$ in the degenerate FWM system in terms of parameters from the coherent coupler system such that:
+\begin{align}
+  \chi &= \frac{8 \left( {b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2} \right)}{{d}_{5}}, \\
+  \varsigma &= \frac{2 \sqrt{{\gamma}_{2} - {\lambda}_{1}} \sqrt{{\gamma}_{1} - {\lambda}_{1}}}{{b}_{0} + {b}_{1} {\lambda}_{1} + {b}_{2} {\lambda}_{1}^{2}},
+\end{align}
 and the Hamiltonian in the degenerate FWM system takes the value:
 \begin{equation}
   \bar{H} = - \frac{{b}_{2} {d}_{5}}{8} - \frac{2}{\chi} + \frac{64 \left({d}_{5} + 16 {\lambda}_{1}\right) {\lambda}_{1}}{\chi^{3} {d}_{5}^{2}}.
@@ -531,14 +548,19 @@ Here, $\hat{u}_j, \hat{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-
 In comparison with Figure \ref{fig:case1-plot1}, the modal power $A_j^2$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
 The initial values of $\hat{u}_j, \hat{v}_j$ were set equal to the values of $u_j, v_j$ used in Figure \ref{fig:case1-plot1} and the $a_1$, $a_2$, $a_{1,1}$, $a_{1,2}$, $a_{2,1}$, and $a_{2,2}$ parameters were the same in all figures.
 
-Finally, the top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+The top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system}.
 Here, $\bar{u}_j, \bar{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
 The corresponding intermodal power conservation laws are evident from the coordinated evolution of the three modes.
 We set $\bar{u}_3(0)=\sigma(z_0 - z_1)/\left(\sigma(z_0)\sigma(z_1)\right)$, and the remaining initial conditions for the other modes in the bar coordinates are then determined using \eqref{eq:projection-hat-as-bars}, where the values for $\hat{u}_j(0), \hat{v}_j(0)$ and all other parameters share the same values as those used in Figure \ref{fig:case2-plot1}.
 
-In Figures \ref{fig:case1-plot1}, \ref{fig:case2-plot1}, and \ref{fig:case3-plot1} the analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
-For the parameter sets shown in Figures~\ref{fig:case1-plot1}--\ref{fig:case3-plot1}, the maximum pointwise absolute discrepancy between the analytic solution vectors and the DOP853 numerical solutions, over the plotted interval and sampled points, was approximately $10^{-11}$, $10^{-13}$, and $10^{-13}$, respectively.
+Finally, the top row of Figure \ref{fig:case4-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the mode power $A_j^2$,  
+while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen}, compared against numerical integration of Jensen's original system in \eqref{eq:jensen}.
+Here, $E_j, E^{*}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v} and thus in this case those variables reduce to absolute magnitude squared and the genuine phase, i.e., both become real variables as confirmed by no imaginary parts observed in Figure \ref{fig:case4-plot1} \textbf{B} and \textbf{D}.
+The initial mode and parameter values for this plot were $E_1(0)=0.731-0.513j$, $E_2(0)=0.551+0.967i$, $\Omega_1=0.462$, $\Omega_2=-0.00783$, $\Omega_3=-0.541$, and $\Omega_4=0.252$.
+
+In Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1} the analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
+For the parameter sets shown in Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1}, the maximum pointwise absolute discrepancy between the analytic solution vectors and the DOP853 numerical solutions, over the plotted interval and sampled points, was approximately $10^{-11}$, $10^{-13}$, $10^{-13}$, and $10^{-15}$, respectively.
 These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
 
 \begin{figure}[H]
@@ -562,6 +584,13 @@ These comparisons confirm both the correctness of the analytic solutions and the
 \label{fig:case3-plot1}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{plots/case4_plot_1.pdf}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen} (lines) compared against numerical integration of Jensen's original system in \eqref{eq:jensen} (symbols).}
+\label{fig:case4-plot1}
+\end{figure}
+
 \section{Conclusion}
 
 We have presented complete analytic solutions for the generalised coherent coupler in nonlinear optics without the symmetric-parameter assumptions used in many treatments.
@@ -571,8 +600,8 @@ These solutions complement previous work in the literature by providing a unifie
 Guided by the structure of these solutions, we explored coordinate transformations that reveal a projection from degenerate FWM to the generalised coherent coupler. 
 The solutions in the degenerate FWM system are single-valued meromorphic Kronecker theta functions, connecting this work to a broader class of integrable nonlinear optical systems.
 
-The connection between the Hamiltonian formulation and the Frobenius-Stickelberger determinant, established in Appendix~\ref{app:fs-det-ham-proof}, provides deeper insight into why these conservation laws hold and links four-wave mixing to classical elliptic function theory.
-This mathematical framework may prove valuable for analysing related parametric processes and could extend to higher-order mixing or multimode interactions.
+The connection between the Hamiltonian formulation and the Frobenius-Stickelberger determinant, established in Appendix~\ref{app:fs-det-ham-proof}, provides deeper insight into why these conservation laws hold and links the coherent coupler to classical elliptic function theory.
+This mathematical framework may prove valuable for analysing related parametric processes.
 
 The methods developed here may be applicable to related nonlinear systems.
 In particular, the approach may be transferable to the analysis of mode coupling in multimode nonlinear fibre optics (see, e.g., Chapter 4 in \cite{heskethNonlinearEffectsMultimode2014}), where similar coupled-mode structures arise.

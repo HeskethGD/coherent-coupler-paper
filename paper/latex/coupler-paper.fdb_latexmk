@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber latex/coupler-paper"] 1778713339.29701 "latex/coupler-paper.bcf" "latex/coupler-paper.bbl" "latex/coupler-paper" 1778715903.20238 0
-  "Coherent-Coupler.bib" 1778665192.92642 25520 c79f911a1ef3bc21d7f9dbdff727cd9e ""
-  "latex/coupler-paper.bcf" 1778715903.12209 110389 1a086c05f68e0383191084512b6009c1 "pdflatex"
+["biber latex/coupler-paper"] 1778713339.29701 "latex/coupler-paper.bcf" "latex/coupler-paper.bbl" "latex/coupler-paper" 1778940958.15511 0
+  "Coherent-Coupler.bib" 1778755782.65342 25520 c79f911a1ef3bc21d7f9dbdff727cd9e ""
+  "latex/coupler-paper.bcf" 1778940958.0711 110389 1a086c05f68e0383191084512b6009c1 "pdflatex"
   (generated)
   "latex/coupler-paper.bbl"
   "latex/coupler-paper.blg"
   (rewritten before read)
-["pdflatex"] 1778715902.0247 "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" "latex/coupler-paper.pdf" "coupler-paper" 1778715903.20265 0
-  "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" 1778715901.7887 65979 051bef9328c4b325824d3770d3e68f5a ""
+["pdflatex"] 1778940956.95281 "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" "latex/coupler-paper.pdf" "coupler-paper" 1778940958.15541 0
+  "/Users/grahamhesketh/mycode/coherent-coupler-paper/paper/coupler-paper.tex" 1778940956.72971 70080 5d95e07e1c1d723229b231c1bb18dcab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -146,15 +146,16 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1767117489 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1767117381 3345747 f63bc61d33022117040a9f04f0c0b490 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "coupler-paper.tex" 1778715901.7887 65979 051bef9328c4b325824d3770d3e68f5a ""
+  "coupler-paper.tex" 1778940956.72971 70080 5d95e07e1c1d723229b231c1bb18dcab ""
   "iopjournal.cls" 1776598911.95477 5945 a926ce0cbf85e8cf61e19f761ed71d40 ""
-  "latex/coupler-paper.aux" 1778715903.11909 16631 55059801dc70157d008263dd2c91098f "pdflatex"
+  "latex/coupler-paper.aux" 1778940958.06713 17896 f6f1cbd8fb7958b35f86008ae46a1f03 "pdflatex"
   "latex/coupler-paper.bbl" 1778713341.41395 50607 1ac416ed65b54962e5263d9f72db5927 "biber latex/coupler-paper"
-  "latex/coupler-paper.out" 1778715903.12134 3975 9ea4ef1eb0f8d7ee1bf65607f358baf7 "pdflatex"
-  "latex/coupler-paper.run.xml" 1778715903.12271 2374 6bf08e69b562e875973d3ad911336af4 "pdflatex"
+  "latex/coupler-paper.out" 1778940958.0703 4144 22ff983d95ad548eb73d255919fa5d73 "pdflatex"
+  "latex/coupler-paper.run.xml" 1778940958.07191 2374 6bf08e69b562e875973d3ad911336af4 "pdflatex"
   "plots/case1_plot_1.pdf" 1778591657.34325 34802 5922308d1f2bf8f8670c13cebc094537 ""
   "plots/case2_plot_1.pdf" 1778591706.18484 35207 00c555551ae5a18aba1725975fce99f9 ""
   "plots/case3_plot_1.pdf" 1778591756.87911 36591 421800d95f4b1b83554bf5edcfefa6e1 ""
+  "plots/case4_plot_1.pdf" 1778936030.33544 24531 4649df5a3276633f40ce6ad8abf5248a ""
   (generated)
   "latex/coupler-paper.aux"
   "latex/coupler-paper.bcf"

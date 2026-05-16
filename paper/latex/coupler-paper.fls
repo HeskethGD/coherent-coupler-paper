@@ -261,6 +261,11 @@ INPUT ./plots/case3_plot_1.pdf
 INPUT ./plots/case3_plot_1.pdf
 INPUT ./plots/case3_plot_1.pdf
 INPUT ./plots/case3_plot_1.pdf
+INPUT ./plots/case4_plot_1.pdf
+INPUT ./plots/case4_plot_1.pdf
+INPUT ./plots/case4_plot_1.pdf
+INPUT ./plots/case4_plot_1.pdf
+INPUT ./plots/case4_plot_1.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT latex/coupler-paper.aux
