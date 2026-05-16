@@ -70,14 +70,17 @@ The coherent coupler is one of the canonical nonlinear optical systems, describi
 In the seminal work of Jensen \cite{jensenNonlinearCoherentCoupler1982}, the coupled-mode equations were analysed to reveal power-dependent switching behaviour, establishing the nonlinear coupler as a prototype device for all-optical signal processing. 
 Despite this long history, closed-form analytic solutions for the full complex envelopes of both modes have, to our knowledge, not previously been reported for the general system with arbitrary propagation constants and distinct self- and cross-phase modulation coefficients.
 
-Most existing analytic treatments of the coupler follow the approach of Jensen and decompose the dynamics into modal powers and relative phase, leading to a single first-order equation for the fractional power imbalance that can be inverted in terms of Jacobi elliptic functions \cite{jensenNonlinearCoherentCoupler1982}. 
+Most existing analytic treatments of the coupler follow the approach of Jensen and decompose the dynamics into modal powers and relative phase, leading to a single equation for the power in one waveguide that can be inverted in terms of Jacobi elliptic functions \cite{jensenNonlinearCoherentCoupler1982}. 
 While this yields the power evolution exactly, it does not directly provide the complex envelopes, and the analysis is typically restricted to the symmetric case in which the two modes share identical propagation constants and nonlinear coefficients. 
 The generalisation to asymmetric couplers introduces additional parameters that complicate the Jacobi elliptic function approach, and solutions for the complex envelopes in this general setting have remained elusive.
 
 The present work derives complete solutions for the complex envelopes of the general asymmetric coupler using Weierstrass elliptic functions. 
-The Weierstrass formulation provides a natural solution pathway: the coupled equations are recast as logarithmic derivatives, which directly yield Weierstrass $\zeta$ functions, and integration produces solutions expressed as ratios of Weierstrass $\sigma$ functions. 
+This work is part of a series of papers by the author that provide complete general solutions to coupled mode systems of nonlinear ordinary differential equations in quasi-continuous-wave nonlinear optics that include 
+linearly polarised (LP) modes of a multimode optical fiber \cite{heskethNonlinearEffectsMultimode2014}, two-wave and three-wave mixing in quadratic nonlinear media \cite{heskethGeneralComplexEnvelope2015}, polarisation dynamics in nonlinear fibres \cite{heskethGeneralComplexEnvelope2015}, parity-time symmetric nonlinear couplers \cite{heskethGeneralComplexEnvelope2015}, 
+and four-wave mixing in an optical fiber \cite{heskethCompleteWeierstrassElliptic2026}.
+The Weierstrass formulation provides a natural solution pathway in such systems: the coupled equations are recast as logarithmic derivatives, which directly yield Weierstrass $\zeta$ functions, and integration produces solutions expressed as ratios of Weierstrass $\sigma$ functions. 
 This progression through the Weierstrass hierarchy, from $\wp$ to $\zeta$ to $\sigma$, follows naturally from the structure of the complex envelope equations. 
-The resulting solutions contain factors of the form $\exp(r\log R(z))$, where $R(z)$ is a ratio of $\sigma$ functions, producing multi-valued branching; we show that a gauge transformation removes this behaviour, yielding a cleaner canonical form. 
+In the case of the coherent coupler considered herein, the resulting solutions contain factors of the form $\exp(r\log R(z))$, where $R(z)$ is a ratio of $\sigma$ functions, producing multi-valued branching; we show that a gauge transformation removes this behaviour, yielding a cleaner canonical form. 
 The exact Weierstrass elliptic function solutions for the general asymmetric coupler constitute the first main result of this paper.
 
 The second main result concerns the relationship between the coherent coupler and degenerate four-wave mixing (FWM). 
@@ -100,7 +103,8 @@ In this section we recall the coherent coupler system from Jensen's classic pape
 Jensen's system of ordinary differential equations, shown in \eqref{eq:jensen}, describes propagation in the quasi-continuous-wave limit, i.e., when temporal envelope variations are negligible compared to the spatial evolution along the propagation direction, allowing time derivatives to be neglected.
 Physically, the equations govern the evolution of optical waves travelling in two waveguides placed close together, which exchange energy through coherent coupling of their evanescent fields.
 This interaction is modelled by the linear coupling terms parameterised by $\Omega_2$.
-Each wave also experiences self-phase modulation (SPM), where its own intensity induces a phase shift on itself, and cross-phase modulation (XPM), where the intensity of the other wave induces an additional phase shift:
+Each wave also experiences self-phase modulation (SPM), where its own intensity induces a phase shift on itself, and cross-phase modulation (XPM), where the intensity of the other wave induces an additional phase shift. 
+The system is described by the following coupled mode equations:
 
 \begin{align}
 \frac{dE_1}{dZ} &= i \left(|E_1|^2 {\Omega}_{3} + 2 |E_2|^2 {\Omega}_{4}\right) E_1 + i {\Omega}_{1} E_1  + i {\Omega}_{2} E_2, \notag \\
@@ -114,7 +118,7 @@ where:
     \item $\Omega_1$ is the common propagation constant
     \item $\Omega_2$ is the linear coupling coefficient
     \item $\Omega_3$ is the self-phase modulation (SPM) coefficient
-    \item $\Omega_4$ is the cross-phase modulation (XPM) coefficient
+    \item $\Omega_4$ is the cross-phase modulation (XPM) coefficient.
 \end{itemize}
 We refer the reader to \cite{jensenNonlinearCoherentCoupler1982} for details on how to express the $\Omega_j$ coefficients in terms of material parameters and overlap integrals. 
 Jensen states that the waveguides in \eqref{eq:jensen} were taken to be identical in order to simplify analysis and obtain solutions in standard elliptic integrals, hence the symmetry in the parameters in the two equations.
@@ -389,7 +393,7 @@ for which the conserved canonical Hamiltonian is:
 \begin{align}
 \hat{H} &= \prod_{l=1}^{N} \hat{u}_l + \prod_{l=1}^{N} \hat{v}_l - \frac{1}{N}\sum_{l=1}^{N} \left(b_2 \hat{u}^{2}_l \hat{v}^{2}_l  - b_1 \hat{u}_l \hat{v}_l \right)
 \end{align}
-and the intermodal power conservation laws are unchanged such that $\hat{u}_j \hat{v}_j - \hat{u}_k \hat{v}_k = \gamma_j - \gamma_k$. 
+and the intermodal power conservation law is unchanged such that $\hat{u}_1 \hat{v}_1 - \hat{u}_2 \hat{v}_2 = \gamma_1 - \gamma_2$. 
 To maintain the connection with the original coordinate system the value of $\hat{H}$ would be fixed at:
 \begin{equation}
 \hat{H} =  - \frac{\left({\gamma}_{1} - {\gamma}_{2}\right)^{2} {b}_{2}}{4} + {b}_{0}.
@@ -404,6 +408,7 @@ The solutions are:
 \hat{u}_j{\left(z\right)} &= \frac{{\hat{\alpha}}_{j} \sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - 2 z_{0} + {\mu}_{j}\right)} e^{-z\left(\zeta\left(\mu_j + z_1 - z_0\right) + b_2\gamma_j\right)} }{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} - z_{1}\right)}}, \notag \\
 \hat{v}_j{\left(z\right)} &= \frac{\sqrt{W_j}\sigma{\left(z_{1}\right)} \sigma{\left(z - {\mu}_{j}\right)} e^{z\left(\zeta\left(\mu_j + z_1 - z_0\right) + b_2\gamma_j\right)}}{ {\hat{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} + z_{1}\right)}}, \label{eq:uhat-vhat-gauge-sols}
 \end{align}
+where $\hat{\alpha}_{j}$ are integration constants used to fix initial conditions, the elliptic functions use invariants $g_2, g_3$, and $\mu_1, \mu_2, z_0, z_1, g_2, g_3$ share the same definitions and values as those given in Section~\ref{sec:mode-power} for the coherent coupler, thereby connecting the two systems. 
 The hatted modes $\hat{u}_j$ have poles at $z=z_0+z_1$ modulo the lattice, whereas their Hamiltonian conjugates $\hat{v}_j$ have poles at $z=z_0-z_1$. 
 In other work on FWM \cite{heskethCompleteWeierstrassElliptic2026}, we encountered cases where modes and their conjugates share poles at $z=z_0$ and there the modal power is the difference of two Weierstrass $\wp$ functions. 
 This suggests rewriting the ratios in \eqref{eq:uhat-vhat-gauge-sols} as quotients of functions with a common pole at $z=z_0$:
@@ -510,7 +515,8 @@ The solutions to \eqref{eq:ubar-vbar-degfwm-system} are for $j=1,2,3$:
 \bar{v}_j{\left(z\right)} &= \sqrt{\frac{s\left(j\right)}{2}}\frac{\sigma{\left(z - {\mu}_{j}\right)} e^{- z \left(\frac{\chi {\bar{\gamma}}_{j}}{s{\left(j \right)}} - \zeta{\left({\mu}_{j} - z_{0}\right)} + \frac{1}{\chi}\right)}}{{\bar{\alpha}}_{j} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}\right)} }, \notag \\
 \bar{u}_j{\left(z\right)} \bar{v}_j{\left(z\right)} &= \frac{s{\left(j \right)}}{2}\left(\wp{\left({\mu}_{j} - z_{0} \right)} - \wp{\left(z - z_{0}\right)}\right) \label{eq:-ubar-vbar-sols-dfwm}
 \end{align}
-where $\bar{\alpha}_j$ is an integration constant that captures initial relative phase offsets between modes and can be used to equate initial conditions between the degenerate FWM and coherent coupler systems. The function $s(j)$ is the degeneracy weight, with $s(1)=s(2)=1$ and $s(3)=2$, and the new third $\mu_j$ constant is $\mu_3 = z_1 + z_0$. The elliptic functions use invariants $g_2, g_3$, and $\mu_1, \mu_2, z_0, z_1, g_2, g_3$ share the same definitions and values as those given in Section~\ref{sec:mode-power} for the coherent coupler, thereby connecting the two systems. 
+where $\bar{\alpha}_j$ is an integration constant that captures initial relative phase offsets between modes and can be used to equate initial conditions between the degenerate FWM and coherent coupler systems. 
+The function $s(j)$ is the degeneracy weight, with $s(1)=s(2)=1$ and $s(3)=2$, and the new third $\mu_j$ constant is $\mu_3 = z_1 + z_0$. The elliptic functions use invariants $g_2, g_3$, and $\mu_1, \mu_2, z_0, z_1, g_2, g_3$ share the same definitions and values as those given in Section~\ref{sec:mode-power} for the coherent coupler, thereby connecting the two systems. 
 The solutions in \eqref{eq:-ubar-vbar-sols-dfwm} take the form of Kronecker theta functions, which are ratios of two Weierstrass $\sigma$ functions with shifted arguments, multiplied by exponential factors.
 These functions are named after Kronecker, who developed both Fourier series \cite{whittakerCourseModernAnalysis2021} and multipole-expansion \cite{weilEllipticFunctionsAccording1976, charolloisEllipticFunctionsAccording2016} representations that may prove useful for further analysis in nonlinear optics.
 Importantly, while the $\sigma$ functions and exponentials are entire functions, their ratio is a single-valued meromorphic function with well-defined poles and zeros, in contrast to the multi-valued solutions in \eqref{eq:u-v-quartic}.
@@ -545,8 +551,8 @@ The initial mode and parameter values for this plot were $u_1(0)=0.487-0.828i$, 
 The top row of Figure \ref{fig:case2-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system}.
 Here, $\hat{u}_j, \hat{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
-In comparison with Figure \ref{fig:case1-plot1}, the modal power $A_j^2$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
 The initial values of $\hat{u}_j, \hat{v}_j$ were set equal to the values of $u_j, v_j$ used in Figure \ref{fig:case1-plot1} and the $a_1$, $a_2$, $a_{1,1}$, $a_{1,2}$, $a_{2,1}$, and $a_{2,2}$ parameters were the same in all figures.
+In comparison with Figure \ref{fig:case1-plot1}, the modal power $A_j^2$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
 
 The top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system}.
@@ -597,7 +603,7 @@ We have presented complete analytic solutions for the generalised coherent coupl
 The solutions, expressed in terms of Weierstrass elliptic functions, provide the full complex field envelopes for all modes under generic initial conditions, including cross-phase modulation and phase mismatch effects.
 These solutions complement previous work in the literature by providing a unified treatment of the complex envelopes themselves rather than treating amplitudes and phases separately.
 
-Guided by the structure of these solutions, we explored coordinate transformations that reveal a projection from degenerate FWM to the generalised coherent coupler. 
+Guided by the structure of these solutions, we explored coordinate transformations that use a gauge transform to remove multi-valued branching behaviour in solutions and reveal a projection from degenerate FWM to the gauge transformed coherent coupler. 
 The solutions in the degenerate FWM system are single-valued meromorphic Kronecker theta functions, connecting this work to a broader class of integrable nonlinear optical systems.
 
 The connection between the Hamiltonian formulation and the Frobenius-Stickelberger determinant, established in Appendix~\ref{app:fs-det-ham-proof}, provides deeper insight into why these conservation laws hold and links the coherent coupler to classical elliptic function theory.
@@ -614,7 +620,7 @@ These analytic solutions may provide new insights for the design and optimisatio
 The author thanks Maria Dimou for a careful read of the manuscript.
 
 \section*{Code Availability}
-The code used in this paper is available at \cite{heskethHeskethGDFwmpaper2026} and includes Python Jupyter notebooks with symbolic derivations using \emph{SymPy} \cite{meurerSymPySymbolicComputing2017} as well as the code for numerical validation used in Section~\ref{sec:num-val}.
+The code used in this paper is available at \cite{GeneralHeskethGDCoherentcouplerpaper} and includes Python Jupyter notebooks with symbolic derivations using \emph{SymPy} \cite{meurerSymPySymbolicComputing2017} as well as the code for numerical validation used in Section~\ref{sec:num-val}.
 
 \appendix
 

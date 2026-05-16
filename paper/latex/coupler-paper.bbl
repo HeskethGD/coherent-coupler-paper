@@ -68,53 +68,7 @@
       \endverb
       \keyw{Data processing,Nonlinear equations,Nonlinear optical devices,Nonlinear optics,Optical bistability,Optical coupling,Optical devices,Optical surface waves,Optical waveguides,Polarization}
     \endentry
-    \entry{agrawalNonlinearFiberOptics2019}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=910d801de7c7b036bee279a678fc8362}{%
-           family={Agrawal},
-           familyi={A\bibinitperiod},
-           given={Govind\bibnamedelima P.},
-           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Academic Press}%
-      }
-      \strng{namehash}{910d801de7c7b036bee279a678fc8362}
-      \strng{fullhash}{910d801de7c7b036bee279a678fc8362}
-      \strng{fullhashraw}{910d801de7c7b036bee279a678fc8362}
-      \strng{bibnamehash}{910d801de7c7b036bee279a678fc8362}
-      \strng{authorbibnamehash}{910d801de7c7b036bee279a678fc8362}
-      \strng{authornamehash}{910d801de7c7b036bee279a678fc8362}
-      \strng{authorfullhash}{910d801de7c7b036bee279a678fc8362}
-      \strng{authorfullhashraw}{910d801de7c7b036bee279a678fc8362}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Nonlinear Fiber Optics, Sixth Edition, provides an up-to-date accounting of the nonlinear phenomena occurring inside optical fibers in telecommunicati}
-      \field{day}{15}
-      \field{edition}{6}
-      \field{isbn}{978-0-12-817042-7}
-      \field{langid}{american}
-      \field{month}{8}
-      \field{title}{Nonlinear {{Fiber Optics}}}
-      \field{urlday}{30}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/GQ3UVRS2/978-0-12-817042-7.html
-      \endverb
-      \verb{urlraw}
-      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
-      \endverb
-      \verb{url}
-      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
-      \endverb
-    \endentry
-    \entry{heskethCompleteWeierstrassElliptic2026}{online}{}{}
+    \entry{heskethNonlinearEffectsMultimode2014}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
            family={Hesketh},
@@ -122,8 +76,20 @@
            given={Graham},
            giveni={G\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {arXiv.org}%
+      \name{namea}{2}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7d64ba606da0df95f4390c1e85ac75fc}{%
+           family={Horak},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Southampton}%
       }
       \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
@@ -133,30 +99,36 @@
       \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{nameabibnamehash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameanamehash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameafullhash}{c331a21821c9e2b80ac10ca2e844160a}
+      \strng{nameafullhashraw}{c331a21821c9e2b80ac10ca2e844160a}
       \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Complete analytic solutions to quasi-continuous-wave four-wave mixing in nonlinear optical fibres are presented in terms of Weierstrass elliptic \$\textbackslash wp\$, \$\textbackslash zeta\$, and \$\textbackslash sigma\$ functions, providing the full complex envelopes for all four waves under arbitrary initial conditions. A sequence of coordinate transformations reveals a canonical form with universal parameter-free structure. Remarkably, these transformations depend explicitly on the propagation variable yet preserve the structural form of the differential equations, an invariance property not previously reported for four-wave mixing. In the canonical coordinates, solutions become single-valued meromorphic Kronecker theta functions, establishing connections with other integrable nonlinear optical systems. The Hamiltonian conservation is shown to arise from the Frobenius-Stickelberger determinant. Numerical validation confirms the solutions using open-source Python libraries.}
-      \field{day}{16}
+      \field{abstract}{Utilizing the modes of a multimode fiber forms a frontier between what is achievable with current fibre technology and what is required for the remainder of the 21st century. Large mode area multimode fibers accommodate the high power delivery demanded by fiber lasers used in industry for precision cutting, welding and drilling functions, and used elsewhere for the generation of white light sources used in fiber communication, medical and precision time keeping applications. This thesis explores the theory of nonlinear effects in multimode fibers with the intention of optimizing existing applications, whilst simultaneously identifying new ones.{$<$}br/{$><$}br/{$>$}A generalized multimode nonlinear Schrodinger equation is numerically solved to explore the phenomenon of self-focusing in multimode fibers, with peak powers in the megawatt regime. Temporal effects compress femtosecond pulses launched into the fundamental mode, driving peak powers up and coupling power into higher order modes; a process identified with transverse spatial contraction and increased intensity. Parameter regimes in which damage may be avoided are identified. The nonlinear interaction of two modes under continuous wave pumping is solved analytically in terms of elliptic functions.{$<$}br/{$><$}br/{$>$}The nonlinear multi frequency dynamics describing the optical regeneration of optical communication signals are researched in a scalar single mode scenario, before nonlinear effects in polarization modes are explored. In the scalar case, a modification to a phase sensitive amplifier from the literature solves the problem of phase to amplitude noise conversion during regeneration. Improved bit error rates in three modulation formats are simulated as a result and experimental collaboration demonstrates proof of principle. Polarization assisted phase sensitive amplification (PAPSA) for signal regeneration is then introduced. Polarization mode benefits include operating power and fiber length reduction, simultaneous regeneration of signal phase and amplitude, and a simple way to decompose the signal into quadrature and in-phase components. An approximate analytic theory of PAPSA is developed. Experimental collaboration demonstrates that PAPSA offers significant signal bit error rate reduction{$<$}br/{$>$}}
       \field{langid}{english}
-      \field{month}{1}
-      \field{title}{Complete {{Weierstrass}} Elliptic Function Solutions and Canonical Coordinates for Four-Wave Mixing in Nonlinear Optical Fibres}
-      \field{urlday}{19}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2026}
+      \field{month}{11}
+      \field{nameatype}{collaborator}
+      \field{pagetotal}{131}
+      \field{title}{Nonlinear Effects in Multimode Optical Fibers}
+      \field{type}{phdthesis}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2014}
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/9QG7STUS/Hesketh - 2026 - Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in n.pdf
+      \verb /Users/grahamhesketh/Zotero/storage/9MYV9J2K/Hesketh - 2014 - Nonlinear effects in multimode optical fibers.pdf;/Users/grahamhesketh/Zotero/storage/J7F427WW/374911.html
       \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/abs/2601.11740v1
+      \verb https://eprints.soton.ac.uk/374911/
       \endverb
       \verb{url}
-      \verb https://arxiv.org/abs/2601.11740v1
+      \verb https://eprints.soton.ac.uk/374911/
       \endverb
     \endentry
     \entry{heskethGeneralComplexEnvelope2015}{article}{}{}
@@ -214,6 +186,97 @@
       \verb https://opg.optica.org/josab/abstract.cfm?uri=josab-32-12-2391
       \endverb
       \keyw{Circular polarization,Optical fields,Optical properties,Periodically poled lithium niobate,Phase shift,Refractive index}
+    \endentry
+    \entry{heskethCompleteWeierstrassElliptic2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
+           family={Hesketh},
+           familyi={H\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Complete analytic solutions to quasi-continuous-wave four-wave mixing in nonlinear optical fibres are presented in terms of Weierstrass elliptic \$\textbackslash wp\$, \$\textbackslash zeta\$, and \$\textbackslash sigma\$ functions, providing the full complex envelopes for all four waves under arbitrary initial conditions. A sequence of coordinate transformations reveals a canonical form with universal parameter-free structure. Remarkably, these transformations depend explicitly on the propagation variable yet preserve the structural form of the differential equations, an invariance property not previously reported for four-wave mixing. In the canonical coordinates, solutions become single-valued meromorphic Kronecker theta functions, establishing connections with other integrable nonlinear optical systems. The Hamiltonian conservation is shown to arise from the Frobenius-Stickelberger determinant. Numerical validation confirms the solutions using open-source Python libraries.}
+      \field{day}{16}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{Complete {{Weierstrass}} Elliptic Function Solutions and Canonical Coordinates for Four-Wave Mixing in Nonlinear Optical Fibres}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/9QG7STUS/Hesketh - 2026 - Complete Weierstrass elliptic function solutions and canonical coordinates for four-wave mixing in n.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2601.11740v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2601.11740v1
+      \endverb
+    \endentry
+    \entry{agrawalNonlinearFiberOptics2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=910d801de7c7b036bee279a678fc8362}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Govind\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{fullhash}{910d801de7c7b036bee279a678fc8362}
+      \strng{fullhashraw}{910d801de7c7b036bee279a678fc8362}
+      \strng{bibnamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorbibnamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authornamehash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorfullhash}{910d801de7c7b036bee279a678fc8362}
+      \strng{authorfullhashraw}{910d801de7c7b036bee279a678fc8362}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nonlinear Fiber Optics, Sixth Edition, provides an up-to-date accounting of the nonlinear phenomena occurring inside optical fibers in telecommunicati}
+      \field{day}{15}
+      \field{edition}{6}
+      \field{isbn}{978-0-12-817042-7}
+      \field{langid}{american}
+      \field{month}{8}
+      \field{title}{Nonlinear {{Fiber Optics}}}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/GQ3UVRS2/978-0-12-817042-7.html
+      \endverb
+      \verb{urlraw}
+      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
+      \endverb
+      \verb{url}
+      \verb https://shop.elsevier.com/books/nonlinear-fiber-optics/agrawal/978-0-12-817042-7
+      \endverb
     \endentry
     \entry{arnoldMathematicalMethodsClassical1989}{book}{}{}
       \name{author}{1}{}{%
@@ -354,8 +417,8 @@
       \strng{authornamehash}{4f449399a7aac2192e706c0d728a8544}
       \strng{authorfullhash}{4f449399a7aac2192e706c0d728a8544}
       \strng{authorfullhashraw}{4f449399a7aac2192e706c0d728a8544}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Using analytic and numerical modelling of fibre transmission systems that employ optical phase conjugation (OPC), we show inter-channel cross-phase modulation depends on the integrated square error between nonlinear profiles before and after OPC and that arranging amplifiers and tuning power levels is crucial to minimizing noise. We derive modulation transparent formulas for phase noise and optimal power settings. Examples are shown for 16 and 64 quadrature amplitude modulation.}
@@ -412,8 +475,8 @@
       \strng{authornamehash}{f5987f3b70bd698e3c1139b23bb8026b}
       \strng{authorfullhash}{f5987f3b70bd698e3c1139b23bb8026b}
       \strng{authorfullhashraw}{f5987f3b70bd698e3c1139b23bb8026b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-65036-2 978-3-642-66209-6}
@@ -457,8 +520,8 @@
       \strng{authornamehash}{5facffddd10df198f54552a89b2717e6}
       \strng{authorfullhash}{5facffddd10df198f54552a89b2717e6}
       \strng{authorfullhashraw}{5facffddd10df198f54552a89b2717e6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{1027-488X}
@@ -762,7 +825,7 @@
       \endverb
       \keyw{Biophysical chemistry,Computational biology and bioinformatics,Technology}
     \endentry
-    \entry{heskethNonlinearEffectsMultimode2014}{thesis}{}{}
+    \entry{GeneralHeskethGDCoherentcouplerpaper}{online}{}{}
       \name{author}{1}{}{%
         {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
            family={Hesketh},
@@ -770,68 +833,8 @@
            given={Graham},
            giveni={G\bibinitperiod}}}%
       }
-      \name{namea}{2}{}{%
-        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
-           family={Hesketh},
-           familyi={H\bibinitperiod},
-           given={Graham},
-           giveni={G\bibinitperiod}}}%
-        {{hash=7d64ba606da0df95f4390c1e85ac75fc}{%
-           family={Horak},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {University of Southampton}%
-      }
-      \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{fullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{bibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorbibnamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authornamehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
-      \strng{nameabibnamehash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameanamehash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameafullhash}{c331a21821c9e2b80ac10ca2e844160a}
-      \strng{nameafullhashraw}{c331a21821c9e2b80ac10ca2e844160a}
-      \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Utilizing the modes of a multimode fiber forms a frontier between what is achievable with current fibre technology and what is required for the remainder of the 21st century. Large mode area multimode fibers accommodate the high power delivery demanded by fiber lasers used in industry for precision cutting, welding and drilling functions, and used elsewhere for the generation of white light sources used in fiber communication, medical and precision time keeping applications. This thesis explores the theory of nonlinear effects in multimode fibers with the intention of optimizing existing applications, whilst simultaneously identifying new ones.{$<$}br/{$><$}br/{$>$}A generalized multimode nonlinear Schrodinger equation is numerically solved to explore the phenomenon of self-focusing in multimode fibers, with peak powers in the megawatt regime. Temporal effects compress femtosecond pulses launched into the fundamental mode, driving peak powers up and coupling power into higher order modes; a process identified with transverse spatial contraction and increased intensity. Parameter regimes in which damage may be avoided are identified. The nonlinear interaction of two modes under continuous wave pumping is solved analytically in terms of elliptic functions.{$<$}br/{$><$}br/{$>$}The nonlinear multi frequency dynamics describing the optical regeneration of optical communication signals are researched in a scalar single mode scenario, before nonlinear effects in polarization modes are explored. In the scalar case, a modification to a phase sensitive amplifier from the literature solves the problem of phase to amplitude noise conversion during regeneration. Improved bit error rates in three modulation formats are simulated as a result and experimental collaboration demonstrates proof of principle. Polarization assisted phase sensitive amplification (PAPSA) for signal regeneration is then introduced. Polarization mode benefits include operating power and fiber length reduction, simultaneous regeneration of signal phase and amplitude, and a simple way to decompose the signal into quadrature and in-phase components. An approximate analytic theory of PAPSA is developed. Experimental collaboration demonstrates that PAPSA offers significant signal bit error rate reduction{$<$}br/{$>$}}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{nameatype}{collaborator}
-      \field{pagetotal}{131}
-      \field{title}{Nonlinear Effects in Multimode Optical Fibers}
-      \field{type}{phdthesis}
-      \field{urlday}{31}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2014}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb /Users/grahamhesketh/Zotero/storage/9MYV9J2K/Hesketh - 2014 - Nonlinear effects in multimode optical fibers.pdf;/Users/grahamhesketh/Zotero/storage/J7F427WW/374911.html
-      \endverb
-      \verb{urlraw}
-      \verb https://eprints.soton.ac.uk/374911/
-      \endverb
-      \verb{url}
-      \verb https://eprints.soton.ac.uk/374911/
-      \endverb
-    \endentry
-    \entry{heskethHeskethGDFwmpaper2026}{software}{}{}
-      \name{author}{1}{}{%
-        {{hash=377f9db53e2daeb53d6fb8e1e94e3c24}{%
-           family={Hesketh},
-           familyi={H\bibinitperiod},
-           given={Graham},
-           giveni={G\bibinitperiod}}}%
+      \list{organization}{1}{%
+        {GitHub}%
       }
       \strng{namehash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{fullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
@@ -842,37 +845,25 @@
       \strng{authorfullhash}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \strng{authorfullhashraw}{377f9db53e2daeb53d6fb8e1e94e3c24}
       \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Code and latex for journal publications}
-      \field{day}{16}
-      \field{hour}{18}
-      \field{minute}{45}
-      \field{month}{1}
-      \field{origday}{30}
-      \field{orighour}{21}
-      \field{origminute}{44}
-      \field{origmonth}{11}
-      \field{origsecond}{18}
-      \field{origtimezone}{Z}
-      \field{origyear}{2025}
-      \field{second}{45}
-      \field{timezone}{Z}
-      \field{title}{{{HeskethGD}}/Fwm-Paper}
+      \field{abstract}{Code and latex for coherent coupler (2 mode) paper - General · HeskethGD/coherent-coupler-paper}
+      \field{langid}{english}
+      \field{title}{General · {{HeskethGD}}/Coherent-Coupler-Paper}
       \field{urlday}{16}
-      \field{urlmonth}{1}
+      \field{urlmonth}{5}
       \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{origdateera}{ce}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/grahamhesketh/Zotero/storage/Z7VWEEBR/coherent-coupler-paper.html
+      \endverb
       \verb{urlraw}
-      \verb https://github.com/HeskethGD/fwm-paper
+      \verb https://github.com/HeskethGD/coherent-coupler-paper
       \endverb
       \verb{url}
-      \verb https://github.com/HeskethGD/fwm-paper
+      \verb https://github.com/HeskethGD/coherent-coupler-paper
       \endverb
     \endentry
     \entry{meurerSymPySymbolicComputing2017}{article}{}{}
@@ -1024,8 +1015,8 @@
       \strng{authornamehash}{3b98d798f6abce49b004b950c7399ba8}
       \strng{authorfullhash}{84c6fbc34416f121bcaaf3c9fdbd6d96}
       \strng{authorfullhashraw}{84c6fbc34416f121bcaaf3c9fdbd6d96}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{SymPy is an open source computer algebra system written in pure Python. It is built with a focus on extensibility and ease of use, through both interactive and programmatic applications. These characteristics have led SymPy to become a popular symbolic library for the scientific Python ecosystem. This paper presents the architecture of SymPy, a description of its features, and a discussion of select submodules. The supplementary material provide additional examples and further outline details of the architecture and features of SymPy.}
@@ -1080,8 +1071,8 @@
       \strng{authornamehash}{7a3c0a3aca593a3400f42a4a6d701442}
       \strng{authorfullhash}{7a3c0a3aca593a3400f42a4a6d701442}
       \strng{authorfullhashraw}{7a3c0a3aca593a3400f42a4a6d701442}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal für die reine und angewandte Mathematik}
