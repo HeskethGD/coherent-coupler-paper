@@ -1,6 +1,6 @@
 \newif\ifpreprint
-% \preprinttrue
-\preprintfalse
+\preprinttrue
+% \preprintfalse
 
 \ifpreprint
   \documentclass[11pt,a4paper]{article}
@@ -107,13 +107,13 @@ Each wave also experiences self-phase modulation (SPM), where its own intensity 
 The system is described by the following coupled mode equations:
 
 \begin{align}
-\frac{dE_1}{dZ} &= i \left(|E_1|^2 {\Omega}_{3} + 2 |E_2|^2 {\Omega}_{4}\right) E_1 + i {\Omega}_{1} E_1  + i {\Omega}_{2} E_2, \notag \\
-\frac{dE_2}{dZ} &= i \left(2 |E_1|^2 {\Omega}_{4} + |E_2|^2 {\Omega}_{3}\right) E_2 + i {\Omega}_{2} E_1  + i {\Omega}_{1} E_2, \label{eq:jensen}
+\frac{dA_1}{dZ} &= i \left(|A_1|^2 {\Omega}_{3} + 2 |A_2|^2 {\Omega}_{4}\right) A_1 + i {\Omega}_{1} A_1  + i {\Omega}_{2} A_2, \notag \\
+\frac{dA_2}{dZ} &= i \left(2 |A_1|^2 {\Omega}_{4} + |A_2|^2 {\Omega}_{3}\right) A_2 + i {\Omega}_{2} A_1  + i {\Omega}_{1} A_2, \label{eq:jensen}
 \end{align}
 
 where:
 \begin{itemize}
-    \item $E_j$ with $j=1,2$ are the slowly-varying complex field amplitudes
+    \item $A_j$ with $j=1,2$ are the slowly-varying complex field amplitudes
     \item $Z$ is the propagation distance
     \item $\Omega_1$ is the common propagation constant
     \item $\Omega_2$ is the linear coupling coefficient
@@ -145,12 +145,12 @@ Jensen's system in \eqref{eq:jensen} is recovered from \eqref{eq:uv-system} by i
 a_1 &= - a_2 = - \frac{i {\Omega}_{1}}{{\Omega}_{2}}, \notag \\
 a_{1,1} &= a_{2,2} = \frac{i {\Omega}_{3}}{{\Omega}_{2}}, \notag \\
 a_{1,2} &= a_{2,1} = - \frac{2 i {\Omega}_{4}}{{\Omega}_{2}}, \notag \\
-u_1(z) &= E_1{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
-u_2(z) &= E^{*}_2{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
-v_1(z) &= -E^{*}_1{\left(Z\right)} e^{\frac{i \pi}{4}}, \notag \\
-v_2(z) &= E_2{\left(Z\right)} e^{\frac{i \pi}{4}}, \label{eq:uv-to-jensen}
+u_1(z) &= A_1{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
+u_2(z) &= A^{*}_2{\left(Z\right)} e^{- \frac{i \pi}{4}}, \notag \\
+v_1(z) &= -A^{*}_1{\left(Z\right)} e^{\frac{i \pi}{4}}, \notag \\
+v_2(z) &= A_2{\left(Z\right)} e^{\frac{i \pi}{4}}, \label{eq:uv-to-jensen}
 \end{align}
-where $E^*$ denotes the complex conjugate and $z=\Omega_2 Z$ is the rescaled coordinate used in \eqref{eq:uv-system}.
+where $A^*$ denotes the complex conjugate and $z=\Omega_2 Z$ is the rescaled coordinate used in \eqref{eq:uv-system}.
 Therefore, Jensen's system in \eqref{eq:jensen} is a special case of the more general system in \eqref{eq:uv-system}.
 
 In the following sections we provide the complete analytic solution for the generalised system in \eqref{eq:uv-system}.
@@ -360,7 +360,7 @@ We show in the next section that the branching behaviour can also be removed in 
 % ---------- SECTION -------------
 % --------------------------------
 
-\section{The relationship between the coherent coupler and degenerate FWM} \label{sec:coord-transforms}
+\section{Relating the coherent coupler to degenerate FWM} \label{sec:coord-transforms}
 
 In this section we present the second main result of this paper: a transformation from the coherent coupler to a canonical form in which solutions are meromorphic and a projection from degenerate FWM onto that form.
 The structure of the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} naturally suggests this transformation.
@@ -537,63 +537,63 @@ This serves two purposes: first, to verify that the solutions correctly satisfy 
 We evaluate the analytic solutions using the \emph{pyweierstrass} Python package \cite{laurentPyweierstrass2022}, which provides Weierstrass elliptic functions as a wrapper around Jacobi theta functions from the \emph{mpmath} package \cite{MpmathPythonLibrary2023}. 
 For comparison, we solve the differential equations numerically using the DOP853 Runge-Kutta algorithm from \emph{SciPy} \cite{virtanenSciPy10Fundamental2020}.
 
-For plotting purposes we define the following complex-valued functions $A^2_j(z),\ \phi_j(z) \in \mathbb{C}$ that are analogous to modal power (absolute value squared) and phase; they would be equivalent to the corresponding real-valued functions if $v_j$ were the complex conjugate of $u_j$ rather than the more general Hamiltonian conjugate that we typically consider in our generalised systems:
+For plotting purposes we define the following complex-valued functions $\mathcal{P}_j(z),\ \phi_j(z) \in \mathbb{C}$ that are analogous to modal power (absolute value squared) and phase; they would be equivalent to the corresponding real-valued functions if $v_j$ were the complex conjugate of $u_j$ rather than the more general Hamiltonian conjugate that we typically consider in our generalised systems:
 \begin{align}
-A^2_j(z) &= u_j(z)v_j(z), \notag \\
+\mathcal{P}_j(z) &= u_j(z)v_j(z), \notag \\
 \phi_j(z) &= \frac{\log\left(\frac{u_j(z)}{v_j(z)}\right)}{2 i}. \label{eq:A-phi-u-v}
 \end{align}
 
-The top row of Figure \ref{fig:case1-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+The top row of Figure \ref{fig:case1-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $\mathcal{P}_j$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} compared against numerical integration of the original general coherent coupler system in \eqref{eq:uv-system}.
 The intermodal power conservation laws in \eqref{eq:power-conserved} are evident from the coordinated evolution of the two modes. 
 The initial mode and parameter values for this plot were $u_1(0)=0.487-0.828i$, $u_2(0)=-0.971-0.865i$, $v_1(0)=0.942 + 0.279i$, $v_2(0)=0.386-0.523i$, $a_1=-0.161$, $a_2=-0.897$, $a_{1,1}=0.583$, $a_{1,2}=a_{2,1}=-0.0754$, and $a_{2,2}=-0.0525$.
 
-The top row of Figure \ref{fig:case2-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+The top row of Figure \ref{fig:case2-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $\mathcal{P}_j$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system}.
 Here, $\hat{u}_j, \hat{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
 The initial values of $\hat{u}_j, \hat{v}_j$ were set equal to the values of $u_j, v_j$ used in Figure \ref{fig:case1-plot1} and the $a_1$, $a_2$, $a_{1,1}$, $a_{1,2}$, $a_{2,1}$, and $a_{2,2}$ parameters were the same in all figures.
-In comparison with Figure \ref{fig:case1-plot1}, the modal power $A_j^2$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
+In comparison with Figure \ref{fig:case1-plot1}, the modal power $\mathcal{P}_j$ is unchanged after the gauge transform but the phase $\phi_j$ changes as expected from the definition of the transform.
 
-The top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $A_j^2$,  
+The top row of Figure \ref{fig:case3-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the complex mode power $\mathcal{P}_j$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system}.
 Here, $\bar{u}_j, \bar{v}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v}.
 The corresponding intermodal power conservation laws are evident from the coordinated evolution of the three modes.
 We set $\bar{u}_3(0)=\sigma(z_0 - z_1)/\left(\sigma(z_0)\sigma(z_1)\right)$, and the remaining initial conditions for the other modes in the bar coordinates are then determined using \eqref{eq:projection-hat-as-bars}, where the values for $\hat{u}_j(0), \hat{v}_j(0)$ and all other parameters share the same values as those used in Figure \ref{fig:case2-plot1}.
 
-Finally, the top row of Figure \ref{fig:case4-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the mode power $A_j^2$,  
+Finally, the top row of Figure \ref{fig:case4-plot1} shows the real, \textbf{A}, and imaginary, \textbf{B}, parts of the mode power $\mathcal{P}_j$,  
 while the bottom row shows the real, \textbf{C}, and imaginary, \textbf{D}, parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen}, compared against numerical integration of Jensen's original system in \eqref{eq:jensen}.
-Here, $E_j, E^{*}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v} and thus in this case those variables reduce to absolute magnitude squared and the genuine phase, i.e., both become real variables as confirmed by no imaginary parts observed in Figure \ref{fig:case4-plot1} \textbf{B} and \textbf{D}.
-The initial mode and parameter values for this plot were $E_1(0)=0.731-0.513i$, $E_2(0)=0.551+0.967i$, $\Omega_1=0.462$, $\Omega_2=-0.00783$, $\Omega_3=-0.541$, and $\Omega_4=0.252$.
+Here, $A_j, A^{*}_j$ are used in place of $u_j, v_j$ in \eqref{eq:A-phi-u-v} and thus in this case those variables reduce to absolute magnitude squared and the genuine phase, i.e., both become real variables as confirmed by no imaginary parts observed in Figure \ref{fig:case4-plot1} \textbf{B} and \textbf{D}.
+The initial mode and parameter values for this plot were $A_1(0)=0.731-0.513i$, $A_2(0)=0.551+0.967i$, $\Omega_1=0.462$, $\Omega_2=-0.00783$, $\Omega_3=-0.541$, and $\Omega_4=0.252$.
 
 In Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1} the analytic solutions (lines) are in excellent agreement with the numerical solutions (symbols).
-For the parameter sets shown in Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1}, the maximum pointwise absolute discrepancy between the analytic solution vectors and the DOP853 numerical solutions, over the plotted interval and sampled points, was approximately $10^{-11}$, $10^{-13}$, $10^{-13}$, and $10^{-15}$, respectively.
+For the parameter sets shown in Figures~\ref{fig:case1-plot1}--\ref{fig:case4-plot1}, the maximum pointwise absolute discrepancy between the analytic solution vectors and the DOP853 numerical solutions, over the plotted interval and sampled points, was approximately $10^{-13}$, $10^{-13}$, $10^{-14}$, and $10^{-15}$, respectively.
 These comparisons confirm both the correctness of the analytic solutions and the feasibility of their numerical evaluation using readily available software tools.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case1_plot_1.pdf}
-\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} (lines) compared against numerical integration of the original general coherent coupler system in \eqref{eq:uv-system} (symbols).}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $\mathcal{P}_j$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic} (lines) compared against numerical integration of the original general coherent coupler system in \eqref{eq:uv-system} (symbols).}
 \label{fig:case1-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
-\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} (lines) compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system} (symbols).}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $\mathcal{P}_j$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the gauge transformed analytic solutions in \eqref{eq:uhat-vhat-gauge-sols} (lines) compared against numerical integration of the gauge transformed general coherent coupler system in \eqref{eq:uv-hat-system} (symbols).}
 \label{fig:case2-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case3_plot_1.pdf}
-\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} (lines) compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system} (symbols).}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the complex mode power $\mathcal{P}_j$, and \textbf{C} real and \textbf{D} imaginary parts of the complex phase variable $\phi_j$, using the analytic solutions in \eqref{eq:-ubar-vbar-sols-dfwm} (lines) compared against numerical integration of the three-mode degenerate FWM system in \eqref{eq:ubar-vbar-degfwm-system} (symbols).}
 \label{fig:case3-plot1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case4_plot_1.pdf}
-\caption{\textbf{A} real and \textbf{B} imaginary parts of the mode power $A_j^2$, and \textbf{C} real and \textbf{D} imaginary parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen} (lines) compared against numerical integration of Jensen's original system in \eqref{eq:jensen} (symbols).}
+\caption{\textbf{A} real and \textbf{B} imaginary parts of the mode power $\mathcal{P}_j$, and \textbf{C} real and \textbf{D} imaginary parts of the phase variable $\phi_j$, using the analytic solutions in \eqref{eq:u-v-quartic-no-wp-sqrt} and the relations in \eqref{eq:uv-to-jensen} (lines) compared against numerical integration of Jensen's original system in \eqref{eq:jensen} (symbols).}
 \label{fig:case4-plot1}
 \end{figure}
 
@@ -613,7 +613,7 @@ The methods developed here may be applicable to related nonlinear systems.
 In particular, the approach may be transferable to the analysis of mode coupling in multimode nonlinear fibre optics (see, e.g., Chapter 4 in \cite{heskethNonlinearEffectsMultimode2014}), where similar coupled-mode structures arise.
 
 The practical utility of these solutions has been demonstrated through numerical evaluation using open-source Python libraries, confirming both their validity and computational accessibility.
-These analytic solutions may provide new insights for the design and optimisation of wavelength converters, parametric amplifiers, and quantum light sources by enabling exact analysis where approximations previously proved inadequate.
+These analytic solutions may provide new insights for the design and optimisation of nonlinear coherent couplers by enabling exact analysis of all-optical switching, nonlinear power transfer, and coherent quantum-optical phenomena in regimes where approximate models prove inadequate.
 
 
 \section*{Acknowledgements}
